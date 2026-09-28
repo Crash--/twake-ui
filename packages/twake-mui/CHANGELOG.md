@@ -1,3 +1,13 @@
+# @linagora/twake-mui [9.10.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.9.1...@linagora/twake-mui@9.10.0) (2026-09-28)
+
+
+### Features
+
+* **twake-mui:** Apply review on list components ([b5971e8](https://github.com/linagora/twake-ui/commit/b5971e8cdc66d12e24479cc1dee5d657c86495a7))
+* **twake-mui:** Migrate ListItem from cozy-ui ([f3f4d0a](https://github.com/linagora/twake-ui/commit/f3f4d0ab092b8cd0c5344831193607da23d353a0))
+* **twake-mui:** Migrate ListItemText from cozy-ui ([ee840a6](https://github.com/linagora/twake-ui/commit/ee840a671b7e0f823a28d1d7a33c325b0bb0f9c9))
+* **twake-mui:** Migrate ListSubheader from cozy-ui ([af32dbd](https://github.com/linagora/twake-ui/commit/af32dbdde9365b86237ca7754a91c562e28913e0))
+
 ## @linagora/twake-mui [9.9.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.9.0...@linagora/twake-mui@9.9.1) (2026-09-24)
 
 
