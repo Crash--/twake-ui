@@ -1,6 +1,7 @@
 import { Chip, Box, Typography } from '@mui/material'
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
+import { screen } from 'storybook/test'
 
 import { ContactPopover } from './index'
 
@@ -38,22 +39,8 @@ type Story = StoryObj<typeof ContactPopover>
 
 export const Default: Story = {
   render: () => {
-    const containerRef = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        containerRef.current
-          ?.querySelectorAll<HTMLElement>('[role="button"]')[0]
-          .click()
-      }, 100)
-      return (): void => clearTimeout(timer)
-    }, [])
-
     return (
-      <Box
-        ref={containerRef}
-        sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}
-      >
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle2" gutterBottom>
             Default — all actions
@@ -108,5 +95,9 @@ export const Default: Story = {
         </Box>
       </Box>
     )
+  },
+  play: async ({ canvas, userEvent }) => {
+    await userEvent.click(canvas.getByText('John Doe'))
+    await screen.findByText('john.doe@example.com')
   }
 }
