@@ -1,8 +1,8 @@
-import { ListItem } from '@mui/material'
 import React, { Children, isValidElement, useState } from 'react'
 
 import { useBreakpoints } from '../../hooks/useBreakpoints'
 import DropdownText from '../DropdownText'
+import ListItem from '../ListItem'
 
 export interface NavDesktopDropdownProps {
   label: string
@@ -29,12 +29,8 @@ export const NavDesktopDropdown = ({
   return (
     <>
       <ListItem
-        sx={{
-          minHeight: 48,
-          py: 1,
-          px: 2,
-          cursor: isActivated ? 'pointer' : undefined
-        }}
+        size="small"
+        sx={{ cursor: isActivated ? 'pointer' : undefined }}
       >
         <DropdownText
           variant="caption"
