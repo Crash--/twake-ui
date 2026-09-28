@@ -3,9 +3,9 @@ import { Box, List, ListItemIcon, Stack } from '@mui/material'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import React from 'react'
 
-import { ListSubheader, ListSubheaderProps } from './index'
-import { ListItemButton } from '../ListItemButton'
-import { ListItemText } from '../ListItemText'
+import ListSubheader, { ListSubheaderProps } from './index'
+import ListItemButton from '../ListItemButton'
+import ListItemText from '../ListItemText'
 
 const meta: Meta<typeof ListSubheader> = {
   title: 'ListSubheader',

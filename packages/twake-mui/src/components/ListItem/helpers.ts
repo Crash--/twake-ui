@@ -3,19 +3,18 @@ import { isMuiElement } from '@mui/material/utils'
 import cx from 'classnames'
 import React, { Children, cloneElement, isValidElement } from 'react'
 
-import { ListItemText, ListItemTextProps } from '../ListItemText'
+import ListItemText, { ListItemTextProps } from '../ListItemText'
 
 export type ListItemGutters = 'default' | 'double' | 'disabled'
 export type ListItemSize = 'small' | 'medium' | 'large'
 
-/** cozy-ui props shared by ListItem and ListItemButton */
-export interface ListItemCozyProps {
+export interface ListItemLayoutProps {
   gutters?: ListItemGutters
   size?: ListItemSize
   ellipsis?: boolean
 }
 
-interface ListItemRowOptions extends ListItemCozyProps {
+interface ListItemRowOptions extends ListItemLayoutProps {
   className?: string
   disableGutters?: boolean
   sx?: SxProps<Theme>

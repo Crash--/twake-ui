@@ -11,7 +11,7 @@ export interface ListSubheaderProps extends Omit<MuiListSubheaderProps, 'ref'> {
   gutters?: ListItemGutters
 }
 
-export const ListSubheader = forwardRef<HTMLLIElement, ListSubheaderProps>(
+const ListSubheader = forwardRef<HTMLLIElement, ListSubheaderProps>(
   ({ className, gutters = 'default', disableGutters, ...props }, ref) => (
     <MuiListSubheader
       ref={ref}

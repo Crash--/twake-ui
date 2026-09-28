@@ -137,7 +137,6 @@ interface ListItemOwnerState {
   disablePadding?: boolean
 }
 
-// Shared by ListItem and ListItemButton, both being cozy-ui's ListItem
 const listItemRoot: CSSObject = {
   gap: 16,
   variants: [
@@ -1182,12 +1181,7 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
     styleOverrides: {
       root: {
         marginTop: 1,
-        marginBottom: 1,
-        '& > .ellipsis': {
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis'
-        }
+        marginBottom: 1
       },
       secondary: {
         marginTop: 1

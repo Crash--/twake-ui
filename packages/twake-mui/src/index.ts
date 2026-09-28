@@ -28,19 +28,10 @@ export {
 } from './components/ContactPopover'
 export { default as DropdownButton } from './components/DropdownButton'
 export { default as DropdownText } from './components/DropdownText'
-export { ListItem, default as ListItemDefault } from './components/ListItem'
-export {
-  ListItemButton,
-  default as ListItemButtonDefault
-} from './components/ListItemButton'
-export {
-  ListItemText,
-  default as ListItemTextDefault
-} from './components/ListItemText'
-export {
-  ListSubheader,
-  default as ListSubheaderDefault
-} from './components/ListSubheader'
+export { default as ListItem } from './components/ListItem'
+export { default as ListItemButton } from './components/ListItemButton'
+export { default as ListItemText } from './components/ListItemText'
+export { default as ListSubheader } from './components/ListSubheader'
 export { Tabs, default as TabsDefault } from './components/Tabs'
 export { Switch, default as SwitchDefault } from './components/Switch'
 export { SearchBar, default as SearchBarDefault } from './components/SearchBar'

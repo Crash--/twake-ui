@@ -4,13 +4,13 @@ import {
 } from '@mui/material'
 import React, { forwardRef } from 'react'
 
-import { computeListItemRow, ListItemCozyProps } from './helpers'
+import { computeListItemRow, ListItemLayoutProps } from './helpers'
 
 export type { ListItemGutters, ListItemSize } from './helpers'
 
-export type ListItemProps = Omit<MuiListItemProps, 'ref'> & ListItemCozyProps
+export type ListItemProps = Omit<MuiListItemProps, 'ref'> & ListItemLayoutProps
 
-export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
+const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
   (
     {
       className,

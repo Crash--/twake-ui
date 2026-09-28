@@ -25,15 +25,15 @@ import {
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import React from 'react'
 
-import { ListItemCozyProps } from '../components/ListItem/helpers'
-import { ListItemButton } from '../components/ListItemButton'
-import { ListItemText } from '../components/ListItemText'
-import { ListSubheader } from '../components/ListSubheader'
+import { ListItemLayoutProps } from '../components/ListItem/helpers'
+import ListItemButton from '../components/ListItemButton'
+import ListItemText from '../components/ListItemText'
+import ListSubheader from '../components/ListSubheader'
 
 const longText =
   'Ada Lovelace wrote the first algorithm meant to be carried out by a machine, long before any computer existed to run it.'
 
-interface DemoProps extends ListItemCozyProps {
+interface DemoProps extends ListItemLayoutProps {
   dense?: boolean
 }
 

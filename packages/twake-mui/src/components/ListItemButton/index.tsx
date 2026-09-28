@@ -5,12 +5,12 @@ import {
 } from '@mui/material'
 import React, { forwardRef } from 'react'
 
-import { computeListItemRow, ListItemCozyProps } from '../ListItem/helpers'
+import { computeListItemRow, ListItemLayoutProps } from '../ListItem/helpers'
 
 export type ListItemButtonProps = Omit<MuiListItemButtonProps, 'ref'> &
-  ListItemCozyProps
+  ListItemLayoutProps
 
-export const ListItemButton = forwardRef<HTMLDivElement, ListItemButtonProps>(
+const ListItemButton = forwardRef<HTMLDivElement, ListItemButtonProps>(
   (
     {
       className,

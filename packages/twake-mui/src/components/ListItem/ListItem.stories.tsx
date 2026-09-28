@@ -15,23 +15,23 @@ import {
   ListItemAvatar,
   ListItemIcon,
   ListItemSecondaryAction,
-  ListSubheader,
   Radio,
   Stack
 } from '@mui/material'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import React from 'react'
 
-import { ListItemCozyProps } from './helpers'
-import { ListItem } from './index'
+import { ListItemLayoutProps } from './helpers'
+import ListItem from './index'
 import { Avatar } from '../Avatar'
-import { ListItemButton } from '../ListItemButton'
-import { ListItemText } from '../ListItemText'
+import ListItemButton from '../ListItemButton'
+import ListItemText from '../ListItemText'
+import ListSubheader from '../ListSubheader'
 
 const longText =
   'Ada Lovelace wrote the first algorithm meant to be carried out by a machine, long before any computer existed to run it.'
 
-const cozyArgTypes = {
+const layoutArgTypes = {
   gutters: {
     control: 'select',
     options: ['default', 'double', 'disabled']
@@ -54,7 +54,7 @@ const meta: Meta<typeof ListItem> = {
   component: ListItem,
   subcomponents: { ListItemButton },
   tags: ['autodocs'],
-  argTypes: cozyArgTypes,
+  argTypes: layoutArgTypes,
   decorators: [
     (Story): React.ReactElement => (
       <Box sx={{ maxWidth: 480 }}>
@@ -89,7 +89,7 @@ export const Default: Story = {
 
 export const Button: StoryObj<typeof ListItemButton> = {
   argTypes: {
-    ...cozyArgTypes,
+    ...layoutArgTypes,
     selected: { control: 'boolean' },
     disabled: { control: 'boolean' }
   },
@@ -105,7 +105,7 @@ export const Button: StoryObj<typeof ListItemButton> = {
   )
 }
 
-interface ExampleProps extends ListItemCozyProps {
+interface ExampleProps extends ListItemLayoutProps {
   title: string
   button?: boolean
   dense?: boolean
