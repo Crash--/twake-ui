@@ -28,6 +28,7 @@ export {
 } from './components/ContactPopover'
 export { default as DropdownButton } from './components/DropdownButton'
 export { default as DropdownText } from './components/DropdownText'
+export { ExtendableFab } from './components/ExtendableFab'
 export { default as ListItem } from './components/ListItem'
 export { default as ListItemButton } from './components/ListItemButton'
 export { default as ListItemText } from './components/ListItemText'
@@ -78,6 +79,10 @@ export type {
   DropdownTextProps,
   DropdownTextVariant
 } from './components/DropdownText'
+export type {
+  ExtendableFabProps,
+  ScrollOptions
+} from './components/ExtendableFab'
 export type {
   ListItemProps,
   ListItemGutters,
