@@ -1,3 +1,11 @@
+# @linagora/twake-mui [9.12.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.11.2...@linagora/twake-mui@9.12.0) (2026-09-29)
+
+
+### Features
+
+* **twake-mui:** Migrate ListItemSkeleton from cozy-ui ([b1ec8f8](https://github.com/linagora/twake-ui/commit/b1ec8f86a86f5caf1003dc139c57697e5e314bce))
+* **twake-mui:** Migrate ListSkeleton from cozy-ui ([782492a](https://github.com/linagora/twake-ui/commit/782492a0a5b5f30f9454641e645081cb6689d415))
+
 ## @linagora/twake-mui [9.11.2](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.11.1...@linagora/twake-mui@9.11.2) (2026-09-29)
 
 
