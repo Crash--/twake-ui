@@ -36,6 +36,7 @@ export { default as ListItemText } from './components/ListItemText'
 export { default as ListItemSkeleton } from './components/ListItemSkeleton'
 export { default as ListSkeleton } from './components/ListSkeleton'
 export { default as ListSubheader } from './components/ListSubheader'
+export { default as PointerAlert } from './components/PointerAlert'
 export { Tabs, default as TabsDefault } from './components/Tabs'
 export { Switch, default as SwitchDefault } from './components/Switch'
 export { SearchBar, default as SearchBarDefault } from './components/SearchBar'
@@ -77,6 +78,10 @@ export type { ContactPopoverCalendarActionProps } from './components/ContactPopo
 export type { ContactPopoverEmailActionProps } from './components/ContactPopover/ContactPopoverEmailAction'
 export type { ChipProps } from './components/Chip'
 export type { DialogProps, DialogSize } from './components/Dialog'
+export type {
+  PointerAlertProps,
+  PointerAlertDirection
+} from './components/PointerAlert'
 export type {
   EmptyProps,
   EmptyIconSize,

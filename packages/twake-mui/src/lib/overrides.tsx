@@ -38,7 +38,7 @@ import React from 'react'
 import { radius } from './radius'
 import AccordionExpandIcon from '../components/AccordionExpandIcon'
 
-const alertSeverities = [
+export const alertSeverities = [
   'primary',
   'secondary',
   'success',
