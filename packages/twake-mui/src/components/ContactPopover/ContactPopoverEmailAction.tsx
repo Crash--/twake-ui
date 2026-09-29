@@ -24,7 +24,6 @@ export const ContactPopoverEmailAction = ({
       rel="noopener noreferrer"
       variant="outlined"
       size="small"
-      fullWidth
       disabled={disabled}
       sx={{
         justifyContent: 'center',
