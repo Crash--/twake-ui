@@ -1,3 +1,10 @@
+# @linagora/twake-mui [9.13.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.12.0...@linagora/twake-mui@9.13.0) (2026-09-29)
+
+
+### Features
+
+* **twake-mui:** Migrate Empty from cozy-ui ([159c7e2](https://github.com/linagora/twake-ui/commit/159c7e2656c03989fed1c4ea6870dcf8889dd468))
+
 # @linagora/twake-mui [9.12.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.11.2...@linagora/twake-mui@9.12.0) (2026-09-29)
 
 
