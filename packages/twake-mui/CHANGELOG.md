@@ -1,3 +1,12 @@
+## @linagora/twake-mui [9.11.2](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.11.1...@linagora/twake-mui@9.11.2) (2026-09-29)
+
+
+### Bug Fixes
+
+* Added break-word to long name and email ([fdfcd16](https://github.com/linagora/twake-ui/commit/fdfcd16b7a381eb9272e1e405f60fc65c85fbbdd))
+* Added disable param for contact popover actions ([fe4af23](https://github.com/linagora/twake-ui/commit/fe4af23240350aa9df0b2a9a58a2bb255340efce))
+* Removed fullwidth from email action button ([e7eb7da](https://github.com/linagora/twake-ui/commit/e7eb7dae06b5afc4421b5f77c512e765ee7b7dfb))
+
 ## @linagora/twake-mui [9.11.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.11.0...@linagora/twake-mui@9.11.1) (2026-09-29)
 
 
