@@ -6,10 +6,13 @@ import React from 'react'
 export interface ContactPopoverVideoActionProps {
   /** URL for video call action (e.g., Twake Meet link) */
   url: string
+  /** Disable the action button */
+  disabled?: boolean
 }
 
 export const ContactPopoverVideoAction = ({
-  url
+  url,
+  disabled = false
 }: ContactPopoverVideoActionProps): JSX.Element => {
   const theme = useTheme()
   return (
@@ -18,6 +21,7 @@ export const ContactPopoverVideoAction = ({
       target="_blank"
       rel="noopener noreferrer"
       size="small"
+      disabled={disabled}
       sx={{ border: `1px solid ${theme.palette.divider}` }}
     >
       <Icon icon={Camera} size={20} color={theme.palette.text.icon} />

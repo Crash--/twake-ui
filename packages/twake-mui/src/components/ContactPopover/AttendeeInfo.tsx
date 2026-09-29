@@ -51,12 +51,19 @@ export const AttendeeInfo = ({
       </Avatar>
       <Box sx={{ minWidth: 0 }}>
         {name && name !== email ? (
-          <Typography variant="body1" sx={{ fontWeight: 500 }} noWrap>
+          <Typography
+            variant="body1"
+            sx={{ fontWeight: 500, wordBreak: 'break-word' }}
+          >
             {name}
           </Typography>
         ) : null}
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Typography variant="body2" color="text.secondary" noWrap>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ wordBreak: 'break-word' }}
+          >
             {email}
           </Typography>
           <IconButton

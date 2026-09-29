@@ -6,10 +6,13 @@ import { useI18n } from 'twake-i18n'
 export interface ContactPopoverEmailActionProps {
   /** URL for email action */
   url: string
+  /** Disable the action button */
+  disabled?: boolean
 }
 
 export const ContactPopoverEmailAction = ({
-  url
+  url,
+  disabled = false
 }: ContactPopoverEmailActionProps): JSX.Element => {
   const theme = useTheme()
   const { t } = useI18n()
@@ -21,7 +24,7 @@ export const ContactPopoverEmailAction = ({
       rel="noopener noreferrer"
       variant="outlined"
       size="small"
-      fullWidth
+      disabled={disabled}
       sx={{
         justifyContent: 'center',
         color: theme.palette.text.primary,

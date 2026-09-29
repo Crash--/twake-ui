@@ -184,7 +184,8 @@ export const ContactPopover: ContactPopoverComponent = ({
           paper: {
             elevation: 4,
             sx: {
-              borderRadius: 2
+              borderRadius: 2,
+              maxWidth: 400
             },
             onMouseEnter: handlePopoverMouseEnter,
             onMouseLeave: handleMouseLeave

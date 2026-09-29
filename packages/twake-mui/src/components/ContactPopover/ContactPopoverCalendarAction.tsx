@@ -6,10 +6,13 @@ import React from 'react'
 export interface ContactPopoverCalendarActionProps {
   /** URL for calendar action (e.g., view attendee's calendar) */
   url: string
+  /** Disable the action button */
+  disabled?: boolean
 }
 
 export const ContactPopoverCalendarAction = ({
-  url
+  url,
+  disabled = false
 }: ContactPopoverCalendarActionProps): JSX.Element => {
   const theme = useTheme()
   return (
@@ -18,6 +21,7 @@ export const ContactPopoverCalendarAction = ({
       target="_blank"
       rel="noopener noreferrer"
       size="small"
+      disabled={disabled}
       sx={{ border: `1px solid ${theme.palette.divider}` }}
     >
       <Icon icon={CalendarToday} size={20} color={theme.palette.text.icon} />
