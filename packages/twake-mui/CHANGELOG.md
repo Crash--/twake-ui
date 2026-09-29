@@ -1,3 +1,10 @@
+# @linagora/twake-mui [9.11.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.10.0...@linagora/twake-mui@9.11.0) (2026-09-29)
+
+
+### Features
+
+* **twake-mui:** Migrate ExtendableFab from cozy-ui ([f94a4f1](https://github.com/linagora/twake-ui/commit/f94a4f187a7a7f6032f48666cc5f9c2b9dd2d55a))
+
 # @linagora/twake-mui [9.10.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.9.1...@linagora/twake-mui@9.10.0) (2026-09-28)
 
 
