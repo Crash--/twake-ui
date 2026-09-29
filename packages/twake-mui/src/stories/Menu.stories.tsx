@@ -139,7 +139,6 @@ export const Screenshot: Story = {
         autoFocus={false}
         disablePortal
         disableScrollLock
-        transitionDuration={0}
       />
     </Box>
   )

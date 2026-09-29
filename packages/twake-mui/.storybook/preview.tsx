@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Preview, StoryContext } from '@storybook/react-vite'
 import { Box, CssBaseline, ThemeProvider } from '@mui/material'
+import type { ThemeOptions } from '@mui/material/styles'
 import { I18n } from 'twake-i18n'
 import { makeTheme } from '../src/lib/makeTheme'
 import '@linagora/twake-css/dist/utils.css'
@@ -20,6 +21,26 @@ const sizeFrameToViewport = (context: StoryContext): void => {
 
   frame.style.width = styles.width
   frame.style.height = styles.height
+}
+
+/**
+ * MUI transitions end on a JS timer that Playwright cannot fast-forward, so a
+ * screenshot taken mid-transition catches an intermediate inline style (Grow's
+ * `scale(1, 1)` changes text antialiasing). Zero durations settle them at once.
+ */
+const instantTransitions: ThemeOptions = {
+  transitions: {
+    duration: {
+      shortest: 0,
+      shorter: 0,
+      short: 0,
+      standard: 0,
+      complex: 0,
+      enteringScreen: 0,
+      leavingScreen: 0
+    },
+    getAutoHeightDuration: () => 0
+  }
 }
 
 const preview: Preview = {
@@ -88,7 +109,11 @@ const preview: Preview = {
   decorators: [
     (Story, context) => {
       const themeMode = context.globals.theme
-      const theme = makeTheme(themeMode)
+      const theme = makeTheme(
+        themeMode,
+        undefined,
+        context.tags.includes('argos') ? instantTransitions : undefined
+      )
 
       const isFullscreen = context.parameters.layout === 'fullscreen'
 
