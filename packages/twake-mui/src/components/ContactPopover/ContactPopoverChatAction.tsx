@@ -6,10 +6,13 @@ import React from 'react'
 export interface ContactPopoverChatActionProps {
   /** URL for chat action (e.g., Twake Chat link) */
   url: string
+  /** Disable the action button */
+  disabled?: boolean
 }
 
 export const ContactPopoverChatAction = ({
-  url
+  url,
+  disabled = false
 }: ContactPopoverChatActionProps): JSX.Element => {
   const theme = useTheme()
   return (
@@ -18,6 +21,7 @@ export const ContactPopoverChatAction = ({
       target="_blank"
       rel="noopener noreferrer"
       size="small"
+      disabled={disabled}
       sx={{ border: `1px solid ${theme.palette.divider}` }}
     >
       <Icon icon={Discuss} size={20} color={theme.palette.text.icon} />
