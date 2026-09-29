@@ -1,3 +1,10 @@
+## @linagora/twake-mui [9.11.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.11.0...@linagora/twake-mui@9.11.1) (2026-09-29)
+
+
+### Reverts
+
+* Revert "feat(twake-mui): Migrate ExtendableFab from cozy-ui" ([671a8f7](https://github.com/linagora/twake-ui/commit/671a8f7621b383aeec7071bda645d07560d6f470))
+
 # @linagora/twake-mui [9.11.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.10.0...@linagora/twake-mui@9.11.0) (2026-09-29)
 
 
