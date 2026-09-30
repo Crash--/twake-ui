@@ -60,14 +60,14 @@ npm run <script> --workspace=twake-mui
 
 ## Release Management
 
-This monorepo uses **release-it** with independent versioning for each package. The release process is fully automated via GitHub Actions.
+This monorepo uses **multi-semantic-release** with independent versioning for each package. The release process is fully automated via GitHub Actions.
 
 ### How it works
 
 ```text
 PR merged to main
     ↓
-CI runs `release-it --ci`
+CI runs `multi-semantic-release`
     ↓
 Detects changed packages since their last tag
     ↓
