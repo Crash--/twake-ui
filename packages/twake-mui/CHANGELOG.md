@@ -1,3 +1,15 @@
+# @linagora/twake-mui [9.15.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.14.1...@linagora/twake-mui@9.15.0) (2026-09-30)
+
+
+### Bug Fixes
+
+* **twake-mui:** Default Alert severity to primary ([9cdb94e](https://github.com/linagora/twake-ui/commit/9cdb94e7e636d54f2d93fdabb21c03ece9bfbff4))
+
+
+### Features
+
+* **twake-mui:** Migrate PointerAlert from cozy-ui ([82aa564](https://github.com/linagora/twake-ui/commit/82aa5646f8da35d1a9986e045a0ed5ec8a5da003))
+
 ## @linagora/twake-mui [9.14.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.14.0...@linagora/twake-mui@9.14.1) (2026-09-30)
 
 
