@@ -1,3 +1,10 @@
+## @linagora/twake-mui [9.14.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.14.0...@linagora/twake-mui@9.14.1) (2026-09-30)
+
+
+### Bug Fixes
+
+* **twake-mui:** Accept any twake-icons from 2.10.0 as peer ([e934d0e](https://github.com/linagora/twake-ui/commit/e934d0e9335c0a63c0caf2dde202aa46ddc33238))
+
 # @linagora/twake-mui [9.14.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.13.0...@linagora/twake-mui@9.14.0) (2026-09-29)
 
 
