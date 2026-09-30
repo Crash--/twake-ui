@@ -60,14 +60,14 @@ npm run <script> --workspace=twake-mui
 
 ## Release Management
 
-This monorepo uses **release-it** with independent versioning for each package. The release process is fully automated via GitHub Actions.
+This monorepo uses **multi-semantic-release** with independent versioning for each package. The release process is fully automated via GitHub Actions.
 
 ### How it works
 
 ```text
 PR merged to main
     ↓
-CI runs `release-it --ci`
+CI runs `multi-semantic-release`
     ↓
 Detects changed packages since their last tag
     ↓
@@ -78,10 +78,16 @@ For each changed package:
     - Creates separate GitHub release
 ```
 
-### DO NOT MAKES CHANGES FOR SEVERAL PACKAGES IN THE SAME PR
+### Depending on a new version of another package
 
-It will cause the release to fail. The ci will try to bump the version for each package and will try to install unreleased packages making the release fail.
-The solution is to merge your modification first, wait for a new release, and then use it in another PR.
+A PR can change several packages. But when a package needs something new from another one (e.g. twake-mui using a new twake-icons icon), split the work:
+
+1. Merge the change in the dependency first and wait for its release.
+2. In another PR, raise the range to that released version and use it.
+
+The range cannot target an unreleased version: the workspace still holds the previous version, so npm looks for it on the registry and the install fails.
+
+Internal peer dependencies (`@linagora/*`, `cozy-*`, `twake-*`) use `>=` ranges. Raising their minimum forces consumers to upgrade them, so mark that commit as a breaking change (`feat!:` or a `BREAKING CHANGE:` footer).
 
 ### Dry-run
 
