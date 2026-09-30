@@ -125,7 +125,11 @@ const preview: Preview = {
               sx={
                 isFullscreen
                   ? undefined
-                  : { padding: '20px', bgcolor: 'background.paper' }
+                  : {
+                      padding: '20px',
+                      bgcolor: 'background.paper',
+                      '& > *': { maxWidth: '100%' }
+                    }
               }
             >
               <Story />
