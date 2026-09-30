@@ -38,7 +38,7 @@ import React from 'react'
 import { radius } from './radius'
 import AccordionExpandIcon from '../components/AccordionExpandIcon'
 
-const alertSeverities = [
+export const alertSeverities = [
   'primary',
   'secondary',
   'success',
@@ -956,9 +956,10 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
     }
   },
   MuiAlert: {
-    // cozy-ui's 16px icons; the icon padding below centres them on the first
-    // line of the message.
     defaultProps: {
+      severity: 'primary',
+      // 16px icons; the icon padding below centres them on the first line of
+      // the message.
       iconMapping: {
         primary: <Icon icon={Info} />,
         secondary: <Icon icon={Info} />,

@@ -69,7 +69,12 @@ export const Screenshot: Story = {
       {sizes.map(size => (
         <section key={size}>
           <h3>{size}</h3>
-          <Stack direction="row" spacing={4}>
+          <Stack
+            direction="row"
+            spacing={4}
+            useFlexGap
+            sx={{ flexWrap: 'wrap' }}
+          >
             <Stack spacing={1}>
               <Typography variant="caption">default</Typography>
               <Row size={size} />
