@@ -62,7 +62,7 @@ const items = options.map(option => (
 
 // One enabled and one disabled field
 const Pair: React.FC<TextFieldProps> = props => (
-  <Stack direction="row" spacing={2}>
+  <Stack direction="row" spacing={2} useFlexGap sx={{ flexWrap: 'wrap' }}>
     <TextField {...props} />
     <TextField disabled {...props} />
   </Stack>
