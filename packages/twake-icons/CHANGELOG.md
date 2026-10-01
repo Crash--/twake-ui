@@ -1,3 +1,10 @@
+## @linagora/twake-icons [2.11.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.11.0...@linagora/twake-icons@2.11.1) (2026-10-01)
+
+
+### Bug Fixes
+
+* **twake-icons:** Keep the Ai icon star transparent ([e78eca6](https://github.com/linagora/twake-ui/commit/e78eca6069571ebef75f2e0538b6ed0f18a195e0))
+
 # @linagora/twake-icons [2.11.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.10.0...@linagora/twake-icons@2.11.0) (2026-10-01)
 
 
