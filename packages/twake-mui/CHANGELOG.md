@@ -1,3 +1,16 @@
+# @linagora/twake-mui [9.16.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.15.0...@linagora/twake-mui@9.16.0) (2026-10-01)
+
+
+### Bug Fixes
+
+* **twake-mui:** Clean old Accordion override ([def3b03](https://github.com/linagora/twake-ui/commit/def3b03479b193a3246e716ae4adc89c4d85cbd2))
+* **twake-mui:** Use theme shadow for Accordion ([97cb9b7](https://github.com/linagora/twake-ui/commit/97cb9b7ce81a61963cf9b3e5aaac615b3da4ae63))
+
+
+### Features
+
+* **twake-mui:** Migrate Accordion from cozy-ui ([4033f8d](https://github.com/linagora/twake-ui/commit/4033f8dc03f550eed64263a77f9953e63f2572ec))
+
 # @linagora/twake-mui [9.15.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@9.14.1...@linagora/twake-mui@9.15.0) (2026-09-30)
 
 
