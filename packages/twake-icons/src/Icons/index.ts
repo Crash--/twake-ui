@@ -1,5 +1,7 @@
 export { default as Account } from './Account'
 export { default as Accounts } from './Accounts'
+export { default as Ai } from './Ai'
+export { default as AiText } from './AiText'
 export { default as Album } from './Album'
 export { default as AlbumAdd } from './AlbumAdd'
 export { default as AlbumRemove } from './AlbumRemove'
