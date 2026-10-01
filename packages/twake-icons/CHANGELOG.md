@@ -1,3 +1,10 @@
+# @linagora/twake-icons [2.11.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.10.0...@linagora/twake-icons@2.11.0) (2026-10-01)
+
+
+### Features
+
+* **twake-icons:** Add Twake AI logotype ([25393d1](https://github.com/linagora/twake-ui/commit/25393d12028e4136b1c76df54033495868af8fcd))
+
 # @linagora/twake-icons [2.10.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.9.0...@linagora/twake-icons@2.10.0) (2026-08-31)
 
 
