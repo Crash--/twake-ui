@@ -1,3 +1,22 @@
+# @linagora/twake-mui [13.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@12.1.0...@linagora/twake-mui@13.0.0) (2026-10-12)
+
+
+### chore
+
+* **twake-mui:** Upgrade twake-i18n from 0.6.0 to 0.7.1 ([311b59b](https://github.com/linagora/twake-ui/commit/311b59b4ae9c9d1bb730a81d1c7df2d9311cf2dc))
+
+
+### Features
+
+* **twake-mui:** Add ActionsBar locales ([ad935ba](https://github.com/linagora/twake-ui/commit/ad935bae17e8be853140507275b14f30a96035eb))
+* **twake-mui:** Migrate ActionsBar from cozy-ui ([dcf2a17](https://github.com/linagora/twake-ui/commit/dcf2a17128be796c0f9c5aa0ebda36051a2a11ee))
+
+
+### BREAKING CHANGES
+
+* **twake-mui:** twake-i18n >=0.7.1 is now a required peer dependency
+of @linagora/twake-mui. Apps must upgrade twake-i18n to 0.7.1 or later.
+
 # @linagora/twake-mui [12.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@12.0.0...@linagora/twake-mui@12.1.0) (2026-10-12)
 
 
