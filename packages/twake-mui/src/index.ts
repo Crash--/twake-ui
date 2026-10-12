@@ -18,6 +18,7 @@ export { theme } from './lib/theme'
 export { radius } from './lib/radius'
 // COMPONENTS & HELPERS
 export { TwakeMuiThemeProvider } from './components/ThemeProvider'
+export { default as ActionsBar } from './components/ActionsBar'
 export { default as ActionsMenu } from './components/ActionsMenu'
 export { default as ActionsMenuWrapper } from './components/ActionsMenu/ActionsMenuWrapper'
 export { default as ActionsMenuItem } from './components/ActionsMenu/ActionsMenuItem'
@@ -134,6 +135,7 @@ export { OverlayFrame } from './components/SpaceOverlay/OverlayFrame'
 // TYPES
 export type { TwakeTheme } from './lib/theme'
 export type { PaletteJson } from './lib/types'
+export type { ActionsBarProps } from './components/ActionsBar'
 export type {
   ActionsMenuProps,
   ActionsMenuComponentsProps
