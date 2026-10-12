@@ -1,3 +1,10 @@
+# @linagora/twake-mui [12.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@12.0.0...@linagora/twake-mui@12.1.0) (2026-10-12)
+
+
+### Features
+
+* **twake-mui:** Migrate AppBar from cozy-ui ([4a7280f](https://github.com/linagora/twake-ui/commit/4a7280f0f4a75687d5de823fd5b544ccd63035cb))
+
 # @linagora/twake-mui [12.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@11.4.0...@linagora/twake-mui@12.0.0) (2026-10-08)
 
 
