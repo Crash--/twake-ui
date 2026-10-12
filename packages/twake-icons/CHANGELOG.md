@@ -1,3 +1,10 @@
+# @linagora/twake-icons [2.14.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.13.2...@linagora/twake-icons@2.14.0) (2026-10-12)
+
+
+### Features
+
+* **twake-icons:** Add UserGroup icon ([df948b5](https://github.com/linagora/twake-ui/commit/df948b5b02d286c562c9a338506c7043d053ad50))
+
 ## @linagora/twake-icons [2.13.2](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.13.1...@linagora/twake-icons@2.13.2) (2026-10-08)
 
 
