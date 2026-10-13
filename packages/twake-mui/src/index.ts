@@ -66,6 +66,7 @@ export { editAttribute } from './components/ActionsMenu/Actions/editAttribute'
 export { others } from './components/ActionsMenu/Actions/others'
 export { exportToText } from './components/ActionsMenu/Actions/exportToText'
 export { Avatar, default as AvatarDefault } from './components/Avatar'
+export { default as BarTitle } from './components/BarTitle'
 export { Button, default as ButtonDefault } from './components/Button'
 export { default as BottomSheet } from './components/BottomSheet'
 export { default as BottomSheetItem } from './components/BottomSheet/BottomSheetItem'
@@ -188,6 +189,7 @@ export type {
 } from './components/ActionsMenu/Actions/print'
 export type { ExportToTextActionOptions } from './components/ActionsMenu/Actions/exportToText'
 export type { AvatarProps } from './components/Avatar'
+export type { BarTitleProps } from './components/BarTitle'
 export type { ButtonProps } from './components/Button'
 export type {
   BottomSheetProps,
