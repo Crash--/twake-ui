@@ -1,3 +1,10 @@
+# @linagora/twake-mui [13.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.1.0...@linagora/twake-mui@13.2.0) (2026-10-13)
+
+
+### Features
+
+* **twake-mui:** Migrate MidEllipsis from cozy-ui ([54c58b7](https://github.com/linagora/twake-ui/commit/54c58b75389c5a608080e2e4df7164f76f441b21))
+
 # @linagora/twake-mui [13.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.0.0...@linagora/twake-mui@13.1.0) (2026-10-13)
 
 
