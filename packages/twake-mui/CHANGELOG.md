@@ -1,3 +1,10 @@
+## @linagora/twake-mui [13.2.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.2.0...@linagora/twake-mui@13.2.1) (2026-10-13)
+
+
+### Bug Fixes
+
+* **twake-mui:** Draw badge counts as a pill ([2cc8518](https://github.com/linagora/twake-ui/commit/2cc8518f927ddd2b571c455a6a0ddddf475151c9))
+
 # @linagora/twake-mui [13.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.1.0...@linagora/twake-mui@13.2.0) (2026-10-13)
 
 
