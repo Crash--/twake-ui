@@ -1,3 +1,10 @@
+# @linagora/twake-mui [13.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.0.0...@linagora/twake-mui@13.1.0) (2026-10-13)
+
+
+### Features
+
+* **twake-mui:** Migrate BarTitle from cozy-ui ([63e9e21](https://github.com/linagora/twake-ui/commit/63e9e21fee5ceaffe6355c6eca9fc7f2aee5500b))
+
 # @linagora/twake-mui [13.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@12.1.0...@linagora/twake-mui@13.0.0) (2026-10-12)
 
 
