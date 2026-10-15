@@ -1,3 +1,10 @@
+# @linagora/twake-mui [14.3.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.2.0...@linagora/twake-mui@14.3.0) (2026-10-15)
+
+
+### Features
+
+* **twake-mui:** Migrate PasswordField from cozy-ui ([5d39ddd](https://github.com/linagora/twake-ui/commit/5d39ddd8c7616e82c9f6c89cabe1a53b6b553864))
+
 # @linagora/twake-mui [14.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.1.0...@linagora/twake-mui@14.2.0) (2026-10-15)
 
 
