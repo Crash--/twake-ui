@@ -17,7 +17,7 @@ export { makePalette } from './lib/makePalette'
 export { theme } from './lib/theme'
 export { radius } from './lib/radius'
 // COMPONENTS & HELPERS
-export { TwakeMuiThemeProvider } from './components/ThemeProvider'
+export { TwakeMuiThemeProvider } from './providers/ThemeProvider'
 export { default as ActionsBar } from './components/ActionsBar'
 export { default as ActionsMenu } from './components/ActionsMenu'
 export { default as ActionsMenuWrapper } from './components/ActionsMenu/ActionsMenuWrapper'
