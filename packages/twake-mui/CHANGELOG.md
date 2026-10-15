@@ -1,3 +1,10 @@
+# @linagora/twake-mui [14.4.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.3.0...@linagora/twake-mui@14.4.0) (2026-10-15)
+
+
+### Features
+
+* **twake-mui:** Migrate AlertProvider from cozy-ui ([9abdc95](https://github.com/linagora/twake-ui/commit/9abdc95037d43d96d2cdcc5c498567f0e065d018))
+
 # @linagora/twake-mui [14.3.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.2.0...@linagora/twake-mui@14.3.0) (2026-10-15)
 
 
