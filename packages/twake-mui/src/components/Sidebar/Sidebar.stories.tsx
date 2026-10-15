@@ -85,6 +85,14 @@ const meta: Meta<typeof Sidebar> = {
   title: 'Sidebar',
   component: Sidebar,
   tags: ['autodocs'],
+  argTypes: {
+    anchor: { control: 'radio', options: ['bottom', 'left'] },
+    open: { control: 'boolean' }
+  },
+  args: {
+    anchor: 'bottom',
+    open: false
+  },
   render: args => <SidebarDemo {...args} />
 }
 
@@ -96,4 +104,18 @@ export const Default: Story = {}
 // Visual Regression - Combined view for Argos testing
 export const Screenshot: Story = {
   tags: ['argos']
+}
+
+export const DrawerMobile: Story = {
+  tags: ['argos', '!autodocs'],
+  globals: { viewport: 'mobile' },
+  args: { anchor: 'left', open: true },
+  parameters: {
+    argos: {
+      modes: {
+        'desktop-light': { disabled: true },
+        'desktop-dark': { disabled: true }
+      }
+    }
+  }
 }
