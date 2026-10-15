@@ -109,6 +109,7 @@ export { NavIcon } from './components/NavIcon'
 export { default as NavText } from './components/NavText'
 export { NavDesktopLimiter } from './components/NavDesktopLimiter'
 export { NavDesktopDropdown } from './components/NavDesktopDropdown'
+export { default as PasswordField } from './components/PasswordField'
 export {
   nameToColor,
   supportedColors,
@@ -274,6 +275,7 @@ export type { NavDropdownProps } from './components/NavLink/NavDropdown'
 export type { NavIconProps } from './components/NavIcon'
 export type { NavTextProps } from './components/NavText'
 export type { NavDesktopLimiterProps } from './components/NavDesktopLimiter'
+export type { PasswordFieldProps } from './components/PasswordField'
 export type { NavDesktopDropdownProps } from './components/NavDesktopDropdown'
 export type {
   VirtualizedTableProps,
