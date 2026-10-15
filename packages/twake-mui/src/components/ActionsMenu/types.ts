@@ -66,14 +66,6 @@ export type ActionFactory<FactoryOptions extends object = object> = (
   options: FactoryOptions
 ) => Action
 
-export interface ShowAlertOptions {
-  message: string
-  severity: 'success' | 'error' | 'info' | 'warning'
-  variant?: 'filled' | 'outlined' | 'standard'
-}
-
-export type ShowAlert = (options: ShowAlertOptions) => void
-
 export interface WebLinkOptions {
   slug: string
   cozyUrl: string
