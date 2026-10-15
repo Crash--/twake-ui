@@ -17,7 +17,7 @@ export { makePalette } from './lib/makePalette'
 export { theme } from './lib/theme'
 export { radius } from './lib/radius'
 // COMPONENTS & HELPERS
-export { TwakeMuiThemeProvider } from './components/ThemeProvider'
+export { TwakeMuiThemeProvider } from './providers/ThemeProvider'
 export { default as ActionsBar } from './components/ActionsBar'
 export { default as ActionsMenu } from './components/ActionsMenu'
 export { default as ActionsMenuWrapper } from './components/ActionsMenu/ActionsMenuWrapper'
@@ -94,6 +94,14 @@ export { default as LoadMore } from './components/LoadMore'
 export { default as Markdown } from './components/Markdown'
 export { default as MidEllipsis } from './components/MidEllipsis'
 export { default as PointerAlert } from './components/PointerAlert'
+export type { AlertProviderProps } from './providers/AlertProvider'
+export type {
+  AlertContextValue,
+  ShowAlert,
+  ShowAlertOptions
+} from './providers/AlertProvider/useAlert'
+export { default as AlertProvider } from './providers/AlertProvider'
+export { useAlert } from './providers/AlertProvider/useAlert'
 export { default as ProgressionBanner } from './components/ProgressionBanner'
 export { Tabs, default as TabsDefault } from './components/Tabs'
 export { Switch, default as SwitchDefault } from './components/Switch'
@@ -161,8 +169,6 @@ export type {
   ActionObject,
   ActionTranslate,
   GenerateWebLink,
-  ShowAlert,
-  ShowAlertOptions,
   WebLinkActionOptions,
   WebLinkClient,
   WebLinkOptions
