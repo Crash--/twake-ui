@@ -1,3 +1,24 @@
+# @linagora/twake-mui [14.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.2.1...@linagora/twake-mui@14.0.0) (2026-10-15)
+
+
+### Code Refactoring
+
+* **twake-mui:** Remove secondarySort from VirtualizedTable ([f0d5632](https://github.com/linagora/twake-ui/commit/f0d5632c57346428f5075f7ea9e338128a597c48))
+
+
+### Features
+
+* **twake-mui:** Add sortingMode to VirtualizedTable ([e747721](https://github.com/linagora/twake-ui/commit/e74772185ae3447d0fce935393119e785b3a3c3a))
+
+
+### BREAKING CHANGES
+
+* **twake-mui:** VirtualizedTable no longer takes secondarySort. Sort
+the rows, secondary order included, before passing them, and set
+sortingMode="server" so that the table keeps their order.
+
+Assisted-by: LLM
+
 ## @linagora/twake-mui [13.2.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.2.0...@linagora/twake-mui@13.2.1) (2026-10-13)
 
 
