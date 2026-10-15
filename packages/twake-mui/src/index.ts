@@ -83,6 +83,7 @@ export { default as DropdownButton } from './components/DropdownButton'
 export { default as DropdownText } from './components/DropdownText'
 export { Empty, EmptySubTitle } from './components/Empty'
 export { ExtendableFab } from './components/ExtendableFab'
+export { default as Filename } from './components/Filename'
 export { default as ListItem } from './components/ListItem'
 export { default as ListItemButton } from './components/ListItemButton'
 export { default as ListItemText } from './components/ListItemText'
@@ -246,6 +247,7 @@ export type {
   ExtendableFabProps,
   ScrollOptions
 } from './components/ExtendableFab'
+export type { FilenameProps } from './components/Filename'
 export type {
   ListItemProps,
   ListItemGutters,
