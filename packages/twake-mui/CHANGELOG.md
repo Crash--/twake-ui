@@ -1,3 +1,10 @@
+# @linagora/twake-mui [14.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.0.0...@linagora/twake-mui@14.1.0) (2026-10-15)
+
+
+### Features
+
+* **twake-mui:** Migrate LoadMore from cozy-ui ([3b505ec](https://github.com/linagora/twake-ui/commit/3b505ec16434d371d7a730cc314df06e6013b724))
+
 # @linagora/twake-mui [14.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@13.2.1...@linagora/twake-mui@14.0.0) (2026-10-15)
 
 
