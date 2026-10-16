@@ -23,7 +23,11 @@ export const NavLinkBase = forwardRef<HTMLDivElement, NavLinkBaseProps>(
           if (onKeyDown) {
             onKeyDown(e)
           }
-          if (!e.defaultPrevented && (e.key === 'Enter' || e.key === ' ')) {
+          if (
+            e.target === e.currentTarget &&
+            !e.defaultPrevented &&
+            (e.key === 'Enter' || e.key === ' ')
+          ) {
             e.preventDefault()
             e.currentTarget.click()
           }

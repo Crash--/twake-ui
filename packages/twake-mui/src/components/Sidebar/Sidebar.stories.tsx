@@ -31,8 +31,7 @@ const SidebarDemo = (props: SidebarProps): React.ReactElement => {
             <NavDropdown
               {...makeProps(['Section 1'])}
               open={openSection1}
-              onToggle={(e: React.MouseEvent<HTMLDivElement>) => {
-                e.stopPropagation()
+              onToggle={() => {
                 setOpenSection1(prev => !prev)
               }}
             >
