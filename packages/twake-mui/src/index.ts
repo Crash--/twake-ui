@@ -75,10 +75,7 @@ export { default as BottomSheetTitle } from './components/BottomSheet/BottomShee
 export { default as Chip } from './components/Chip'
 export { default as ColorList } from './components/ColorList'
 export { Dialog, default as DialogDefault } from './components/Dialog'
-export {
-  ContactPopover,
-  default as ContactPopoverDefault
-} from './components/ContactPopover'
+export { default as ContactPopover } from './components/ContactPopover'
 export { default as DropdownButton } from './components/DropdownButton'
 export { default as DropdownText } from './components/DropdownText'
 export { Empty, EmptySubTitle } from './components/Empty'

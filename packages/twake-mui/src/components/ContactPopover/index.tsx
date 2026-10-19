@@ -59,7 +59,7 @@ interface ContactPopoverComponent extends React.FC<ContactPopoverProps> {
   EmailAction: typeof ContactPopoverEmailAction
 }
 
-export const ContactPopover: ContactPopoverComponent = ({
+const ContactPopover: ContactPopoverComponent = ({
   name,
   email,
   children,
