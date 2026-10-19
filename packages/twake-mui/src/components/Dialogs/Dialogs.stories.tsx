@@ -1,4 +1,11 @@
-import { Attachment, Dots, Icon, Pen, People } from '@linagora/twake-icons'
+import {
+  Attachment,
+  Cloud,
+  Dots,
+  Icon,
+  Pen,
+  People
+} from '@linagora/twake-icons'
 import {
   Button,
   IconButton,
@@ -14,6 +21,7 @@ import React, { useState } from 'react'
 import ConfirmDialog from './ConfirmDialog'
 import FixedActionsDialog from './FixedActionsDialog'
 import FixedDialog from './FixedDialog'
+import IllustrationDialog from './IllustrationDialog'
 import StandardDialog, { StandardDialogProps } from './StandardDialog'
 import AlertProvider from '../../providers/AlertProvider'
 import { useAlert } from '../../providers/AlertProvider/useAlert'
@@ -42,7 +50,8 @@ const dialogs = {
   StandardDialog,
   ConfirmDialog,
   FixedDialog,
-  FixedActionsDialog
+  FixedActionsDialog,
+  IllustrationDialog
 } satisfies Record<string, React.ComponentType<StandardDialogProps>>
 
 type DialogName = keyof typeof dialogs
@@ -205,13 +214,16 @@ const Playground: React.FC<StoryArgs> = ({
     showAlert({ message: 'Back button has been pressed', severity: 'success' })
     close()
   }
-  const title = titleWithButton ? (
-    <TitleWithButton />
-  ) : longTitle ? (
-    `${dialog} - ${SHORT_TEXT}`
-  ) : (
-    dialog
-  )
+  const title =
+    dialog === 'IllustrationDialog' ? (
+      <Icon icon={Cloud} size={140} />
+    ) : titleWithButton ? (
+      <TitleWithButton />
+    ) : longTitle ? (
+      `${dialog} - ${SHORT_TEXT}`
+    ) : (
+      dialog
+    )
 
   return (
     <>
@@ -344,6 +356,18 @@ export const FixedActionsDialogScreenshot: Story = {
       {...screenshotProps}
       title="FixedActionsDialog"
       content={LONG_TEXT}
+    />
+  )
+}
+
+export const IllustrationDialogScreenshot: Story = {
+  tags: ['argos'],
+  parameters: { layout: 'fullscreen' },
+  render: () => (
+    <IllustrationDialog
+      {...screenshotProps}
+      size="small"
+      title={<Icon icon={Cloud} size={140} />}
     />
   )
 }
