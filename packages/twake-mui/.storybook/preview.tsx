@@ -127,15 +127,12 @@ const preview: Preview = {
           <ThemeProvider theme={theme} defaultMode={themeMode}>
             <CssBaseline />
             <Box
-              sx={
-                isFullscreen
-                  ? undefined
-                  : {
-                      padding: '20px',
-                      bgcolor: 'background.paper',
-                      '& > *': { maxWidth: '100%' }
-                    }
-              }
+              sx={{
+                bgcolor: 'background.paper',
+                ...(isFullscreen
+                  ? { minHeight: '100vh' }
+                  : { padding: '20px', '& > *': { maxWidth: '100%' } })
+              }}
             >
               <Story />
             </Box>
