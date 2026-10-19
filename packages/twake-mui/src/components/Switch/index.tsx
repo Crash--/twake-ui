@@ -13,7 +13,7 @@ export interface SwitchProps extends Omit<
   icon?: IconProps['icon']
 }
 
-export const Switch: React.FC<SwitchProps> = ({ icon, ...props }) => {
+const Switch: React.FC<SwitchProps> = ({ icon, ...props }) => {
   const thumb = (
     <span className="switchThumb">
       {!!icon && <Icon icon={icon} size={14} />}

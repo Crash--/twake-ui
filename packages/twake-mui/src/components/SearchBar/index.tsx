@@ -24,7 +24,7 @@ import { SearchBarProps } from './types'
 
 const locales = { de, en, es, fr, it, ru, vi }
 
-export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
+const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
   (
     {
       placeholder,

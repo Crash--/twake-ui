@@ -23,7 +23,7 @@ import React from 'react'
 
 import { ListItemLayoutProps } from './helpers'
 import ListItem from './index'
-import { Avatar } from '../Avatar'
+import Avatar from '../Avatar'
 import ListItemButton from '../ListItemButton'
 import ListItemText from '../ListItemText'
 import ListSubheader from '../ListSubheader'
