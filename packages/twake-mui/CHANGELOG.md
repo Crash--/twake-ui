@@ -1,3 +1,31 @@
+# @linagora/twake-mui [15.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.4.0...@linagora/twake-mui@15.0.0) (2026-10-19)
+
+
+### Code Refactoring
+
+* **twake-mui:** Export Avatar as default only ([a7a138e](https://github.com/linagora/twake-ui/commit/a7a138e0cf2e731fb5eba00bc7dfdbe2c8993f0b))
+* **twake-mui:** Export Button as default only ([c5ac445](https://github.com/linagora/twake-ui/commit/c5ac445f3f438e1d3f366c906067b18fd19e2ded))
+* **twake-mui:** Export ContactPopover as default only ([e74ddbe](https://github.com/linagora/twake-ui/commit/e74ddbec7a0fe526d508075364cc52d586cc26db))
+* **twake-mui:** Export SearchBar as default only ([34d0050](https://github.com/linagora/twake-ui/commit/34d00502da7c41edfcf841a49494b139cf977d9f))
+* **twake-mui:** Export Switch as default only ([b22aebc](https://github.com/linagora/twake-ui/commit/b22aebc9809137eb8a7effb30f8dd5ed98ff97cc))
+* **twake-mui:** Export Tabs as default only ([47d31fe](https://github.com/linagora/twake-ui/commit/47d31fea3c68ba104ff92f455b7ca0db47d43cab))
+
+
+### BREAKING CHANGES
+
+* **twake-mui:** ContactPopoverDefault is no longer exported. Import
+ContactPopover instead.
+* **twake-mui:** SearchBarDefault is no longer exported. Import SearchBar
+instead.
+* **twake-mui:** SwitchDefault is no longer exported. Import Switch
+instead.
+* **twake-mui:** TabsDefault is no longer exported. Import Tabs
+instead.
+* **twake-mui:** ButtonDefault is no longer exported. Import Button
+instead.
+* **twake-mui:** AvatarDefault is no longer exported. Import Avatar
+instead.
+
 # @linagora/twake-mui [14.4.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.3.0...@linagora/twake-mui@14.4.0) (2026-10-15)
 
 
