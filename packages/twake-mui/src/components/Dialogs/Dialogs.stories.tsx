@@ -12,6 +12,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import React, { useState } from 'react'
 
 import ConfirmDialog from './ConfirmDialog'
+import FixedActionsDialog from './FixedActionsDialog'
 import FixedDialog from './FixedDialog'
 import StandardDialog, { StandardDialogProps } from './StandardDialog'
 import AlertProvider from '../../providers/AlertProvider'
@@ -40,7 +41,8 @@ const noop = (): void => undefined
 const dialogs = {
   StandardDialog,
   ConfirmDialog,
-  FixedDialog
+  FixedDialog,
+  FixedActionsDialog
 } satisfies Record<string, React.ComponentType<StandardDialogProps>>
 
 type DialogName = keyof typeof dialogs
@@ -331,5 +333,17 @@ export const FixedDialogScreenshot: Story = {
   parameters: { layout: 'fullscreen' },
   render: () => (
     <FixedDialog {...screenshotProps} title="FixedDialog" content={LONG_TEXT} />
+  )
+}
+
+export const FixedActionsDialogScreenshot: Story = {
+  tags: ['argos'],
+  parameters: { layout: 'fullscreen' },
+  render: () => (
+    <FixedActionsDialog
+      {...screenshotProps}
+      title="FixedActionsDialog"
+      content={LONG_TEXT}
+    />
   )
 }
