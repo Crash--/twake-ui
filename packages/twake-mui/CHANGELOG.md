@@ -1,3 +1,28 @@
+# @linagora/twake-mui [16.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@15.2.0...@linagora/twake-mui@16.0.0) (2026-10-19)
+
+
+### Code Refactoring
+
+* **twake-mui:** Export Dialog as default only ([ed447eb](https://github.com/linagora/twake-ui/commit/ed447eb8041974c1b4d3b55bb7160740003a787e))
+
+
+### Features
+
+* **twake-mui:** Migrate ConfirmDialog from cozy-ui ([62098f2](https://github.com/linagora/twake-ui/commit/62098f26bafbf660126e9a408fbb650d3914187b))
+* **twake-mui:** Migrate FixedActionsDialog from cozy-ui ([61c34b1](https://github.com/linagora/twake-ui/commit/61c34b12069ab66d59498342790a26508f00d8a2))
+* **twake-mui:** Migrate FixedDialog from cozy-ui ([bb6ba7f](https://github.com/linagora/twake-ui/commit/bb6ba7f66938fff8bd8cc51ab9c17c7554119394))
+* **twake-mui:** Migrate IllustrationDialog from cozy-ui ([ba5525e](https://github.com/linagora/twake-ui/commit/ba5525ef40e9ec4d018c62ef96f9d6d8806c17fa))
+* **twake-mui:** Migrate InstallFlagshipAppDialog from cozy-ui ([4869572](https://github.com/linagora/twake-ui/commit/48695729c9c89651d21f10140fa3fd83c6e2b1d4))
+* **twake-mui:** Migrate PermissionDialog from cozy-ui ([b8f9628](https://github.com/linagora/twake-ui/commit/b8f962838b91c23b85d8528b07504be79d46f33f))
+* **twake-mui:** Migrate ShortcutDialog from cozy-ui ([74c0614](https://github.com/linagora/twake-ui/commit/74c061468784736d77ef3a738b20ba4d0bfece15))
+* **twake-mui:** Migrate StandardDialog from cozy-ui ([a43530f](https://github.com/linagora/twake-ui/commit/a43530f7906a39a518ae97a15b0e006d1e46ab71))
+
+
+### BREAKING CHANGES
+
+* **twake-mui:** DialogDefault is no longer exported. Import Dialog
+instead.
+
 # @linagora/twake-mui [15.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@15.1.0...@linagora/twake-mui@15.2.0) (2026-10-19)
 
 
