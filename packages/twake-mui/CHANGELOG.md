@@ -1,3 +1,10 @@
+## @linagora/twake-mui [16.0.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.0.0...@linagora/twake-mui@16.0.1) (2026-10-19)
+
+
+### Bug Fixes
+
+* **twake-mui:** Disabled ContactPopoved action has now visible state ([bcbf81e](https://github.com/linagora/twake-ui/commit/bcbf81e29cb997599cacc5fb0ea34a5813905820))
+
 # @linagora/twake-mui [16.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@15.2.0...@linagora/twake-mui@16.0.0) (2026-10-19)
 
 
