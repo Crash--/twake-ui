@@ -10,7 +10,7 @@ import {
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import React from 'react'
 
-import { Switch, SwitchProps } from './index'
+import Switch, { SwitchProps } from './index'
 
 const colors = ['primary', 'secondary', 'success', 'default'] as const
 
