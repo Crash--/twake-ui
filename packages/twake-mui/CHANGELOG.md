@@ -1,3 +1,11 @@
+# @linagora/twake-mui [15.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@15.0.0...@linagora/twake-mui@15.1.0) (2026-10-19)
+
+
+### Features
+
+* **twake-mui:** Implement sidebar drawer ([43a443b](https://github.com/linagora/twake-ui/commit/43a443bcff5719c828382230971beb83be4fb10a))
+* **twake-mui:** Separate click and toggle event in NavDropdown ([4ae7157](https://github.com/linagora/twake-ui/commit/4ae715714a04ba4eb606c598b7ec4e715c511dca))
+
 # @linagora/twake-mui [15.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@14.4.0...@linagora/twake-mui@15.0.0) (2026-10-19)
 
 
