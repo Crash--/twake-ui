@@ -1,3 +1,10 @@
+# @linagora/twake-mui [15.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@15.1.0...@linagora/twake-mui@15.2.0) (2026-10-19)
+
+
+### Features
+
+* **twake-mui:** Export AppTitle ([2a19fc2](https://github.com/linagora/twake-ui/commit/2a19fc27bb033e6855545923904dae6b8c4c4cd1))
+
 # @linagora/twake-mui [15.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@15.0.0...@linagora/twake-mui@15.1.0) (2026-10-19)
 
 
