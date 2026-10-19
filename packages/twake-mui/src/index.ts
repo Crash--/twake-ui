@@ -103,7 +103,7 @@ export type {
 export { default as AlertProvider } from './providers/AlertProvider'
 export { useAlert } from './providers/AlertProvider/useAlert'
 export { default as ProgressionBanner } from './components/ProgressionBanner'
-export { Tabs, default as TabsDefault } from './components/Tabs'
+export { default as Tabs } from './components/Tabs'
 export { Switch, default as SwitchDefault } from './components/Switch'
 export { SearchBar, default as SearchBarDefault } from './components/SearchBar'
 export { Sidebar, SIDEBAR_MOBILE_HEIGHT } from './components/Sidebar'
