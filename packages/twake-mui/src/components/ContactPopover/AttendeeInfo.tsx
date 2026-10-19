@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 import { useI18n } from 'twake-i18n'
 
-import { Avatar } from '../Avatar'
+import Avatar from '../Avatar'
 import { nameToColor, getInitials } from '../Avatar/helpers'
 
 export interface AttendeeInfoProps {

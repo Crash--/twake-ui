@@ -65,7 +65,7 @@ export { copyToClipboard } from './components/ActionsMenu/Actions/copyToClipboar
 export { editAttribute } from './components/ActionsMenu/Actions/editAttribute'
 export { others } from './components/ActionsMenu/Actions/others'
 export { exportToText } from './components/ActionsMenu/Actions/exportToText'
-export { Avatar, default as AvatarDefault } from './components/Avatar'
+export { default as Avatar } from './components/Avatar'
 export { default as BarTitle } from './components/BarTitle'
 export { Button, default as ButtonDefault } from './components/Button'
 export { default as BottomSheet } from './components/BottomSheet'
