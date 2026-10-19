@@ -19,7 +19,7 @@ import {
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import React from 'react'
 
-import { Dialog, DialogProps, DialogSize } from './index'
+import Dialog, { DialogProps, DialogSize } from './index'
 import ListItemButton from '../ListItemButton'
 import ListItemText from '../ListItemText'
 
