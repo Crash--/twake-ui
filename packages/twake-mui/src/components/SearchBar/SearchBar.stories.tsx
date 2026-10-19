@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import React from 'react'
 
-import { SearchBar } from './index'
+import SearchBar from './index'
 
 const sizes = ['small', 'medium', 'large', 'auto'] as const
 
