@@ -3,12 +3,16 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import React, { useState } from 'react'
 
 import InstallFlagshipAppDialog from './InstallFlagshipAppDialog'
+import ShortcutDialog from './ShortcutDialog'
 import AlertProvider from '../../providers/AlertProvider'
 
 const noop = (): void => undefined
 
 const specificDialogs = {
-  InstallFlagshipAppDialog
+  InstallFlagshipAppDialog,
+  ShortcutDialog: ({ onClose }): React.ReactElement => (
+    <ShortcutDialog onClose={onClose} onSave={noop} />
+  )
 } satisfies Record<string, React.FC<{ onClose: () => void }>>
 
 type SpecificDialogName = keyof typeof specificDialogs
@@ -57,4 +61,16 @@ export const InstallFlagshipAppScreenshot: Story = {
   tags: ['argos'],
   parameters: { layout: 'fullscreen' },
   render: () => <InstallFlagshipAppDialog onClose={noop} />
+}
+
+export const ShortcutScreenshot: Story = {
+  tags: ['argos'],
+  parameters: { layout: 'fullscreen' },
+  render: () => (
+    <ShortcutDialog
+      shortcut={{ name: 'Twake.url', url: 'https://twake.app' }}
+      onClose={noop}
+      onSave={noop}
+    />
+  )
 }
