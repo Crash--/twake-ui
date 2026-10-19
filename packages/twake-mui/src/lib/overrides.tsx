@@ -493,15 +493,20 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
             padding: '0 8px 8px',
             height: 'auto',
             maxHeight: 'calc(100% - 32px)',
-            borderRadius: 6
+            borderRadius: 6,
+            '& .dialogDivider': { marginLeft: -8, marginRight: -8 }
           }
         },
         '&.medium': { maxWidth: 544 },
         '&.large': { maxWidth: 800 },
         '&.full': { maxWidth: '100%' }
       }),
+      container: {
+        '&.alignTop': { alignItems: 'start' }
+      },
       paperFullScreen: {
-        '&.small, &.medium, &.large': { maxWidth: '100%' }
+        '&.small, &.medium, &.large': { maxWidth: '100%' },
+        '& .dialogActions': { paddingBottom: 'env(safe-area-inset-bottom)' }
       }
     }
   },
@@ -524,7 +529,8 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
         '&.dialogTitleWithClose': {
           paddingRight: '4rem',
           [theme.breakpoints.down('md')]: { paddingRight: '3rem' }
-        }
+        },
+        '&.dialogTitleFluid': { paddingTop: 0 }
       })
     }
   },
@@ -534,7 +540,41 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
         padding: '24px 32px 0',
         [theme.breakpoints.down('md')]: { padding: '24px 16px 0' },
         // MUI drops the top padding after a title, cozy-ui keeps it
-        [`.${dialogTitleClasses.root} + &`]: { paddingTop: 24 }
+        [`.${dialogTitleClasses.root} + &`]: { paddingTop: 24 },
+        '&.disableGutters': {
+          padding: 0,
+          '& .dialogContentInner': { marginBottom: 0 },
+          '& .dialogTitleFluidContainer': { margin: 0 }
+        },
+        '& .dialogContentInner': {
+          marginBottom: 24,
+          '&.withFluidActions': {
+            [theme.breakpoints.down('md')]: {
+              marginBottom: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%',
+              '& .dialogContentWrapper': {
+                flexGrow: 1,
+                '&:not(.withActions)': {
+                  paddingBottom: 'calc(env(safe-area-inset-bottom) + 16px)'
+                }
+              },
+              '& .dialogActions': {
+                paddingBottom: 'calc(env(safe-area-inset-bottom) + 16px)'
+              }
+            }
+          },
+          '& .dialogTitleFluidContainer': {
+            marginLeft: '-2rem',
+            marginRight: '-2rem',
+            [theme.breakpoints.down('md')]: {
+              marginLeft: '-1rem',
+              marginRight: '-1rem',
+              marginTop: '-0.75rem'
+            }
+          }
+        }
       })
     }
   },
@@ -547,7 +587,16 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
           margin: '8px 16px',
           '& button': { flexGrow: 1 }
         },
-        '& > :not(style) ~ :not(style)': { marginLeft: 4 }
+        '& > :not(style) ~ :not(style)': { marginLeft: 4 },
+        '&.dialogActionsFluid': { margin: '24px 0 0' },
+        '&.columnLayout': {
+          flexDirection: 'column-reverse',
+          '& button': {
+            width: '100%',
+            margin: 0,
+            '&:not(:first-child)': { marginBottom: 8 }
+          }
+        }
       })
     }
   },
@@ -558,7 +607,7 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
         variants: [
           {
             props: { variant: 'inset' },
-            style: { marginLeft: 64 }
+            style: { marginLeft: 64, '&.dialogDivider': { marginLeft: 80 } }
           },
           {
             props: ({ ownerState }) =>
@@ -715,6 +764,22 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
     defaultProps: { size: 'large' },
     styleOverrides: {
       root: ({ theme }) => ({
+        '&.dialogIconButton': {
+          position: 'absolute',
+          top: '1.15rem',
+          zIndex: 1,
+          backgroundColor: theme.vars.palette.background.paper,
+          '&:hover': { backgroundColor: theme.vars.palette.action.selected },
+          [theme.breakpoints.down('md')]: { top: '0.25rem' }
+        },
+        '&.dialogCloseButton': {
+          right: '1.15rem',
+          [theme.breakpoints.down('md')]: { right: '0.25rem' }
+        },
+        '&.dialogBackButton': {
+          left: '1.15rem',
+          [theme.breakpoints.down('md')]: { left: '0.25rem' }
+        },
         variants: [
           {
             props: { color: 'default' },

@@ -76,6 +76,10 @@ export { default as BottomSheetTitle } from './components/BottomSheet/BottomShee
 export { default as Chip } from './components/Chip'
 export { default as ColorList } from './components/ColorList'
 export { default as Dialog } from './components/Dialog'
+export { default as StandardDialog } from './components/Dialogs/StandardDialog'
+export { default as DialogCloseButton } from './components/Dialogs/DialogCloseButton'
+export { default as DialogBackButton } from './components/Dialogs/DialogBackButton'
+export { useDialogLayout } from './components/Dialogs/useDialogLayout'
 export { default as ContactPopover } from './components/ContactPopover'
 export { default as DropdownButton } from './components/DropdownButton'
 export { default as DropdownText } from './components/DropdownText'
@@ -234,6 +238,16 @@ export type {
 export type { OverlayFrameProps } from './components/SpaceOverlay/OverlayFrame'
 export type { ColorListProps, ColorListSize } from './components/ColorList'
 export type { DialogProps, DialogSize } from './components/Dialog'
+export type { StandardDialogProps } from './components/Dialogs/StandardDialog'
+export type { DialogSectionsProps } from './components/Dialogs/types'
+export type { DialogCloseButtonProps } from './components/Dialogs/DialogCloseButton'
+export type { DialogBackButtonProps } from './components/Dialogs/DialogBackButton'
+export type {
+  DialogCloseReason,
+  DialogLayout,
+  DialogLayoutComponentsProps,
+  DialogLayoutProps
+} from './components/Dialogs/useDialogLayout'
 export type {
   PointerAlertProps,
   PointerAlertDirection
