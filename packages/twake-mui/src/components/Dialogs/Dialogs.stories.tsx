@@ -22,6 +22,7 @@ import ConfirmDialog from './ConfirmDialog'
 import FixedActionsDialog from './FixedActionsDialog'
 import FixedDialog from './FixedDialog'
 import IllustrationDialog from './IllustrationDialog'
+import PermissionDialog from './PermissionDialog'
 import StandardDialog, { StandardDialogProps } from './StandardDialog'
 import AlertProvider from '../../providers/AlertProvider'
 import { useAlert } from '../../providers/AlertProvider/useAlert'
@@ -46,12 +47,32 @@ const BACKGROUND =
 
 const noop = (): void => undefined
 
+const PermissionDialogExample: React.FC<StandardDialogProps> = ({
+  open,
+  title,
+  content,
+  actions,
+  actionsLayout,
+  onClose
+}) => (
+  <PermissionDialog
+    open={open}
+    icon={Cloud}
+    title={typeof title === 'string' ? title : 'PermissionDialog'}
+    content={content}
+    actions={actions}
+    actionsLayout={actionsLayout}
+    onClose={onClose}
+  />
+)
+
 const dialogs = {
   StandardDialog,
   ConfirmDialog,
   FixedDialog,
   FixedActionsDialog,
-  IllustrationDialog
+  IllustrationDialog,
+  PermissionDialog: PermissionDialogExample
 } satisfies Record<string, React.ComponentType<StandardDialogProps>>
 
 type DialogName = keyof typeof dialogs
@@ -231,7 +252,11 @@ const Playground: React.FC<StoryArgs> = ({
       {open && (
         <DialogComponent
           {...props}
-          size={dialog === 'ConfirmDialog' ? undefined : props.size}
+          size={
+            dialog === 'ConfirmDialog' || dialog === 'PermissionDialog'
+              ? undefined
+              : props.size
+          }
           open
           fullScreen={fullScreen || undefined}
           onClose={withCloseButton ? close : undefined}
@@ -368,6 +393,18 @@ export const IllustrationDialogScreenshot: Story = {
       {...screenshotProps}
       size="small"
       title={<Icon icon={Cloud} size={140} />}
+    />
+  )
+}
+
+export const PermissionDialogScreenshot: Story = {
+  tags: ['argos'],
+  parameters: { layout: 'fullscreen' },
+  render: () => (
+    <PermissionDialogExample
+      {...screenshotProps}
+      title="Are you sure?"
+      content="Content of a confirm dialog, precising what the actions will do, and asking the user if she is sure."
     />
   )
 }
