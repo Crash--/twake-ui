@@ -37,7 +37,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node scripts/copyAssets.mjs",
     "build:doc": "storybook build --output-dir storybook-static",
     "start": "tsc --watch",
     "test": "vitest run --project unit",

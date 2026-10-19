@@ -75,7 +75,18 @@ export { default as BottomSheetHeader } from './components/BottomSheet/BottomShe
 export { default as BottomSheetTitle } from './components/BottomSheet/BottomSheetTitle'
 export { default as Chip } from './components/Chip'
 export { default as ColorList } from './components/ColorList'
-export { Dialog, default as DialogDefault } from './components/Dialog'
+export { default as Dialog } from './components/Dialog'
+export { default as StandardDialog } from './components/Dialogs/StandardDialog'
+export { default as DialogCloseButton } from './components/Dialogs/DialogCloseButton'
+export { default as DialogBackButton } from './components/Dialogs/DialogBackButton'
+export { default as ConfirmDialog } from './components/Dialogs/ConfirmDialog'
+export { default as FixedDialog } from './components/Dialogs/FixedDialog'
+export { default as FixedActionsDialog } from './components/Dialogs/FixedActionsDialog'
+export { default as IllustrationDialog } from './components/Dialogs/IllustrationDialog'
+export { default as PermissionDialog } from './components/Dialogs/PermissionDialog'
+export { default as InstallFlagshipAppDialog } from './components/Dialogs/InstallFlagshipAppDialog'
+export { default as ShortcutDialog } from './components/Dialogs/ShortcutDialog'
+export { useDialogLayout } from './components/Dialogs/useDialogLayout'
 export { default as ContactPopover } from './components/ContactPopover'
 export { default as DropdownButton } from './components/DropdownButton'
 export { default as DropdownText } from './components/DropdownText'
@@ -234,6 +245,23 @@ export type {
 export type { OverlayFrameProps } from './components/SpaceOverlay/OverlayFrame'
 export type { ColorListProps, ColorListSize } from './components/ColorList'
 export type { DialogProps, DialogSize } from './components/Dialog'
+export type { StandardDialogProps } from './components/Dialogs/StandardDialog'
+export type { DialogSectionsProps } from './components/Dialogs/types'
+export type { ShortcutDialogProps } from './components/Dialogs/ShortcutDialog'
+export type { InstallFlagshipAppDialogProps } from './components/Dialogs/InstallFlagshipAppDialog'
+export type { PermissionDialogProps } from './components/Dialogs/PermissionDialog'
+export type { IllustrationDialogProps } from './components/Dialogs/IllustrationDialog'
+export type { FixedActionsDialogProps } from './components/Dialogs/FixedActionsDialog'
+export type { FixedDialogProps } from './components/Dialogs/FixedDialog'
+export type { ConfirmDialogProps } from './components/Dialogs/ConfirmDialog'
+export type { DialogCloseButtonProps } from './components/Dialogs/DialogCloseButton'
+export type { DialogBackButtonProps } from './components/Dialogs/DialogBackButton'
+export type {
+  DialogCloseReason,
+  DialogLayout,
+  DialogLayoutComponentsProps,
+  DialogLayoutProps
+} from './components/Dialogs/useDialogLayout'
 export type {
   PointerAlertProps,
   PointerAlertDirection
