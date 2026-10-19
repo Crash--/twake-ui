@@ -1,6 +1,11 @@
 {
   "Dialogs": {
     "closeButton": "Close",
-    "backButton": "Back"
+    "backButton": "Back",
+    "installFlagshipApp": {
+      "title": "Scan the QR Code",
+      "text": "or go directly to the <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>or <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> to install the Twake Workplace app",
+      "linkLabel": "Go to the Twake Workplace application download page"
+    }
   }
 }
