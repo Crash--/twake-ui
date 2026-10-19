@@ -11,6 +11,7 @@ import {
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import React, { useState } from 'react'
 
+import ConfirmDialog from './ConfirmDialog'
 import StandardDialog, { StandardDialogProps } from './StandardDialog'
 import AlertProvider from '../../providers/AlertProvider'
 import { useAlert } from '../../providers/AlertProvider/useAlert'
@@ -36,7 +37,8 @@ const BACKGROUND =
 const noop = (): void => undefined
 
 const dialogs = {
-  StandardDialog
+  StandardDialog,
+  ConfirmDialog
 } satisfies Record<string, React.ComponentType<StandardDialogProps>>
 
 type DialogName = keyof typeof dialogs
@@ -72,6 +74,8 @@ const InnerElements: React.FC = () => {
   const { showAlert } = useAlert()
   const [isBottomSheetOpen, setBottomSheetOpen] = useState(false)
   const [isInnerDialogOpen, setInnerDialogOpen] = useState(false)
+  const [isInnerConfirmOpen, setInnerConfirmOpen] = useState(false)
+  const [isSheetConfirmOpen, setSheetConfirmOpen] = useState(false)
   const [menuAnchor, setMenuAnchor] = useState<HTMLElement | null>(null)
 
   const closeMenu = (): void => setMenuAnchor(null)
@@ -88,6 +92,9 @@ const InnerElements: React.FC = () => {
         </Button>
         <Button onClick={() => setBottomSheetOpen(true)}>
           Show inner bottom sheet
+        </Button>
+        <Button onClick={() => setInnerConfirmOpen(true)}>
+          Show inner confirm dialog
         </Button>
         <Button onClick={() => setInnerDialogOpen(true)}>
           Show inner dialog
@@ -122,9 +129,30 @@ const InnerElements: React.FC = () => {
           content="This is a simple content"
         />
       )}
+      {isInnerConfirmOpen && (
+        <ConfirmDialog
+          open
+          onClose={() => setInnerConfirmOpen(false)}
+          title="This is a simple title"
+          content="This is a simple content"
+        />
+      )}
       {isBottomSheetOpen && (
         <BottomSheet backdrop onClose={() => setBottomSheetOpen(false)}>
-          <BottomSheetItem>{LONG_TEXT}</BottomSheetItem>
+          <BottomSheetItem>
+            <Button onClick={() => setSheetConfirmOpen(true)} sx={{ mb: 2 }}>
+              Show inner confirm dialog
+            </Button>
+            {LONG_TEXT}
+            {isSheetConfirmOpen && (
+              <ConfirmDialog
+                open
+                onClose={() => setSheetConfirmOpen(false)}
+                title="This is a simple title"
+                content="This is a simple content"
+              />
+            )}
+          </BottomSheetItem>
         </BottomSheet>
       )}
     </>
@@ -187,6 +215,7 @@ const Playground: React.FC<StoryArgs> = ({
       {open && (
         <DialogComponent
           {...props}
+          size={dialog === 'ConfirmDialog' ? undefined : props.size}
           open
           fullScreen={fullScreen || undefined}
           onClose={withCloseButton ? close : undefined}
@@ -275,4 +304,22 @@ export const StandardDialogScreenshot: Story = {
   tags: ['argos'],
   parameters: { layout: 'fullscreen' },
   render: () => <StandardDialog {...screenshotProps} title="StandardDialog" />
+}
+
+export const ConfirmDialogScreenshot: Story = {
+  tags: ['argos'],
+  parameters: { layout: 'fullscreen' },
+  render: () => (
+    <ConfirmDialog
+      {...screenshotProps}
+      title="Are you sure?"
+      content="Content of a confirm dialog, precising what the actions will do, and asking the user if she is sure."
+      actions={
+        <>
+          <Button variant="outlined">Close Modal</Button>
+          <Button color="error">Do something destructive</Button>
+        </>
+      }
+    />
+  )
 }
