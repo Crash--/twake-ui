@@ -1,3 +1,10 @@
+# @linagora/twake-icons [2.15.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.14.0...@linagora/twake-icons@2.15.0) (2026-10-20)
+
+
+### Features
+
+* **twake-icons:** Add ManageSearch icon ([25fe610](https://github.com/linagora/twake-ui/commit/25fe610b3f363865dc3c022d64777f81b1461886))
+
 # @linagora/twake-icons [2.14.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.13.2...@linagora/twake-icons@2.14.0) (2026-10-12)
 
 
