@@ -1,3 +1,10 @@
+# @linagora/twake-icons [2.16.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.15.0...@linagora/twake-icons@2.16.0) (2026-10-21)
+
+
+### Features
+
+* **twake-icons:** Add LocationOutlined icon ([f6522fb](https://github.com/linagora/twake-ui/commit/f6522fb610c1cc6da84c8989b55eabc707dbd292))
+
 # @linagora/twake-icons [2.15.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.14.0...@linagora/twake-icons@2.15.0) (2026-10-20)
 
 
