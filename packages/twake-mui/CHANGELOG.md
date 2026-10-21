@@ -1,3 +1,10 @@
+# @linagora/twake-mui [16.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.1.0...@linagora/twake-mui@16.2.0) (2026-10-21)
+
+
+### Features
+
+* **twake-mui:** Migrate FilePathLink from cozy-ui ([49a90f5](https://github.com/linagora/twake-ui/commit/49a90f54647a0e697be1038d061b24af5449541e))
+
 # @linagora/twake-mui [16.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.0.1...@linagora/twake-mui@16.1.0) (2026-10-21)
 
 
