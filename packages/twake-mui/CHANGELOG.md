@@ -1,3 +1,10 @@
+# @linagora/twake-mui [17.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@17.0.0...@linagora/twake-mui@17.1.0) (2026-10-22)
+
+
+### Features
+
+* **twake-mui:** Migrate NestedSelect from cozy-ui ([112d694](https://github.com/linagora/twake-ui/commit/112d69461cab48248b088c1da2c722b18d2dbffc))
+
 # @linagora/twake-mui [17.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.3.0...@linagora/twake-mui@17.0.0) (2026-10-22)
 
 
