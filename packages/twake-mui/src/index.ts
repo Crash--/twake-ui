@@ -95,6 +95,7 @@ export { ExtendableFab } from './components/ExtendableFab'
 export { default as Filename } from './components/Filename'
 export { default as FilePath } from './components/FilePath'
 export { default as FilePathLink } from './components/FilePathLink'
+export { default as IntentHeader } from './components/IntentHeader'
 export { default as ListItem } from './components/ListItem'
 export { default as ListItemButton } from './components/ListItemButton'
 export { default as ListItemText } from './components/ListItemText'
@@ -304,6 +305,7 @@ export type {
 export type { FilenameProps } from './components/Filename'
 export type { FilePathProps } from './components/FilePath'
 export type { FilePathLinkProps } from './components/FilePathLink'
+export type { IntentHeaderProps } from './components/IntentHeader'
 export type {
   ListItemProps,
   ListItemGutters,
