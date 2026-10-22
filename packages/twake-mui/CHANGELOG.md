@@ -1,3 +1,22 @@
+# @linagora/twake-mui [17.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.3.0...@linagora/twake-mui@17.0.0) (2026-10-22)
+
+
+### Bug Fixes
+
+* **twake-mui:** Make native form controls inherit the app font ([3746c36](https://github.com/linagora/twake-ui/commit/3746c36684d01d1b8e39b02cdbd6557797143aeb))
+
+
+### BREAKING CHANGES
+
+* **twake-mui:** CssBaseline now sets `font: inherit` on button, input,
+optgroup, select and textarea. Controls that set no font of their own
+(raw elements, `Box component="button"`, AccordionSummary) now take the
+font family, size, weight and line-height of their parent instead of
+the browser's. Set a font explicitly on a control to keep its previous
+rendering, or opt out globally by passing to TwakeMuiThemeProvider
+`themeOptions.components.MuiCssBaseline.styleOverrides` set to
+`{ 'button, input, optgroup, select, textarea': { font: 'revert' } }`.
+
 # @linagora/twake-mui [16.3.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.2.0...@linagora/twake-mui@16.3.0) (2026-10-22)
 
 
