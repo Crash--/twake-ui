@@ -1,3 +1,10 @@
+# @linagora/twake-mui [18.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.0.0...@linagora/twake-mui@18.1.0) (2026-10-22)
+
+
+### Features
+
+* **twake-mui:** Lighten the Backdrop to 12% black in light theme ([48ea234](https://github.com/linagora/twake-ui/commit/48ea234e6ccd1d69cc6164a291e0d5c4976c1897))
+
 # @linagora/twake-mui [18.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@17.1.0...@linagora/twake-mui@18.0.0) (2026-10-22)
 
 
