@@ -1,7 +1,8 @@
 import { Link, Typography } from '@mui/material'
 import React from 'react'
 import ReactMarkdown, { Components } from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+
+import { remarkPlugins } from './helpers'
 
 export interface MarkdownProps {
   content: string
@@ -36,8 +37,6 @@ const components: Components = {
   h5: makeHeading('h5'),
   h6: makeHeading('h6')
 }
-
-const remarkPlugins = [remarkGfm]
 
 const Markdown: React.FC<MarkdownProps> = ({ content }) => (
   <ReactMarkdown remarkPlugins={remarkPlugins} components={components}>
