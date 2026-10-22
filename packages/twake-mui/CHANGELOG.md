@@ -1,3 +1,22 @@
+# @linagora/twake-mui [18.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@17.1.0...@linagora/twake-mui@18.0.0) (2026-10-22)
+
+
+* feat(twake-mui)!: Remove encryptedUrl from the download action ([bf7480f](https://github.com/linagora/twake-ui/commit/bf7480f37d89b166850cc50fdf566b421eef00cb))
+
+
+### Features
+
+* **twake-mui:** Migrate ConfirmDialogProvider from cozy-ui ([eb9de6d](https://github.com/linagora/twake-ui/commit/eb9de6d3ac69b83455d127bb44f826f26af9e2ec))
+* **twake-mui:** Migrate SelectionProvider from cozy-ui ([50b91f4](https://github.com/linagora/twake-ui/commit/50b91f446ca91c498514debe1034010db2ac5557))
+
+
+### BREAKING CHANGES
+
+* `download` no longer accepts `encryptedUrl` and
+`DownloadFileOptions` no longer has `url`. Apps that downloaded an
+encrypted file through this option must pass its URL to their own
+`downloadFile` implementation instead.
+
 # @linagora/twake-mui [17.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@17.0.0...@linagora/twake-mui@17.1.0) (2026-10-22)
 
 
