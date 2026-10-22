@@ -1,5 +1,8 @@
+import { Typography } from '@mui/material'
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import React from 'react'
 
+import { getPlainTextFromMarkdown } from './helpers'
 import Markdown from './index'
 
 const content = `
@@ -83,4 +86,14 @@ export const Default: Story = {
 export const Screenshot: Story = {
   tags: ['argos'],
   args: { content }
+}
+
+export const PlainText: Story = {
+  args: {
+    content:
+      '# Demo\n\nSome **bold** text, a [link](https://twake.app) and a list:\n\n- first\n- second'
+  },
+  render: ({ content }) => (
+    <Typography noWrap>{getPlainTextFromMarkdown(content)}</Typography>
+  )
 }
