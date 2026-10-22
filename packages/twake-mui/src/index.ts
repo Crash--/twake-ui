@@ -112,14 +112,12 @@ export { default as NestedSelectModal } from './components/NestedSelect/NestedSe
 export { default as NestedSelectBottomSheet } from './components/NestedSelect/NestedSelectBottomSheet'
 export { default as NestedSelectResponsive } from './components/NestedSelect/NestedSelectResponsive'
 export { default as PointerAlert } from './components/PointerAlert'
-export type { AlertProviderProps } from './providers/AlertProvider'
-export type {
-  AlertContextValue,
-  ShowAlert,
-  ShowAlertOptions
-} from './providers/AlertProvider/useAlert'
 export { default as AlertProvider } from './providers/AlertProvider'
 export { useAlert } from './providers/AlertProvider/useAlert'
+export { default as ConfirmDialogProvider } from './providers/ConfirmDialogProvider'
+export { useConfirmDialog } from './providers/ConfirmDialogProvider/useConfirmDialog'
+export { default as SelectionProvider } from './providers/SelectionProvider'
+export { useSelection } from './providers/SelectionProvider/useSelection'
 export { default as ProgressionBanner } from './components/ProgressionBanner'
 export { default as Tabs } from './components/Tabs'
 export { default as Switch } from './components/Switch'
@@ -275,6 +273,19 @@ export type {
   PointerAlertProps,
   PointerAlertDirection
 } from './components/PointerAlert'
+export type { AlertProviderProps } from './providers/AlertProvider'
+export type {
+  AlertContextValue,
+  ShowAlert,
+  ShowAlertOptions
+} from './providers/AlertProvider/useAlert'
+export type { ConfirmDialogProviderProps } from './providers/ConfirmDialogProvider'
+export type {
+  ConfirmDialogContextValue,
+  ShowConfirmDialogOptions
+} from './providers/ConfirmDialogProvider/useConfirmDialog'
+export type { SelectionProviderProps } from './providers/SelectionProvider'
+export type { SelectionContextValue } from './providers/SelectionProvider/useSelection'
 export type { ProgressionBannerProps } from './components/ProgressionBanner'
 export type {
   EmptyProps,

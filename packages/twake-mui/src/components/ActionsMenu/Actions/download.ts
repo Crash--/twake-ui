@@ -9,14 +9,12 @@ import { Action, ActionCallbackOptions, ActionDocument } from '../types'
 export interface DownloadFileOptions<Client> {
   client: Client
   file: ActionDocument
-  url?: string
   webviewIntent?: WebviewService
   driveId?: string
 }
 
 export interface DownloadActionOptions<Client> {
   client: Client
-  encryptedUrl?: string
   downloadFile: (options: DownloadFileOptions<Client>) => unknown
 }
 
@@ -26,7 +24,6 @@ interface DownloadCallbackOptions extends ActionCallbackOptions {
 
 export const download = <Client>({
   client,
-  encryptedUrl,
   downloadFile
 }: DownloadActionOptions<Client>): Action => {
   const { t } = getActionsI18n()
@@ -42,7 +39,6 @@ export const download = <Client>({
       downloadFile({
         client,
         file: docs[0],
-        url: encryptedUrl,
         webviewIntent,
         driveId
       })
