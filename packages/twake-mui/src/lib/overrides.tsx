@@ -170,6 +170,12 @@ const listItemRoot: CSSObject = {
 }
 
 export const overrides: NonNullable<ThemeOptions['components']> = {
+  MuiCssBaseline: {
+    styleOverrides: {
+      // Browsers give form controls their own system font instead of the page's
+      'button, input, optgroup, select, textarea': { font: 'inherit' }
+    }
+  },
   MuiAppBar: {
     // MUI otherwise paints every app bar with the paper colour in dark mode
     defaultProps: { color: 'default', enableColorOnDark: true },
