@@ -1,3 +1,10 @@
+# @linagora/twake-mui [18.4.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.3.0...@linagora/twake-mui@18.4.0) (2026-10-22)
+
+
+### Features
+
+* **twake-mui:** Add getPlainTextFromMarkdown helper ([a47e189](https://github.com/linagora/twake-ui/commit/a47e1897ecdd14e8d2e8b7c6663815272c00aad4)), closes [cozy/cozy-ui#2965](https://github.com/cozy/cozy-ui/issues/2965)
+
 # @linagora/twake-mui [18.3.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.2.0...@linagora/twake-mui@18.3.0) (2026-10-22)
 
 
