@@ -1,3 +1,10 @@
+# @linagora/twake-mui [18.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.1.0...@linagora/twake-mui@18.2.0) (2026-10-22)
+
+
+### Features
+
+* **twake-mui:** Migrate IntentHeader from cozy-ui ([fd35f2c](https://github.com/linagora/twake-ui/commit/fd35f2c0715d9ec2fac81940b584074aefdf7532))
+
 # @linagora/twake-mui [18.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.0.0...@linagora/twake-mui@18.1.0) (2026-10-22)
 
 
