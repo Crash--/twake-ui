@@ -487,6 +487,23 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
       }
     }
   },
+  MuiBackdrop: {
+    styleOverrides: {
+      root: ({ theme }) => ({
+        variants: [
+          {
+            props: { invisible: false },
+            style: {
+              backgroundColor: alpha(theme.palette.common.black, 0.12),
+              ...theme.applyStyles('dark', {
+                backgroundColor: alpha(theme.palette.common.black, 0.5)
+              })
+            }
+          }
+        ]
+      })
+    }
+  },
   MuiDialog: {
     defaultProps: { disableEnforceFocus: true },
     styleOverrides: {
