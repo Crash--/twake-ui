@@ -1,3 +1,10 @@
+# @linagora/twake-mui [16.3.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.2.0...@linagora/twake-mui@16.3.0) (2026-10-22)
+
+
+### Features
+
+* **twake-mui:** Migrate NavigationList from cozy-ui ([2bb292a](https://github.com/linagora/twake-ui/commit/2bb292a1534e53d332194b4e609210479cea9aaa))
+
 # @linagora/twake-mui [16.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@16.1.0...@linagora/twake-mui@16.2.0) (2026-10-21)
 
 
