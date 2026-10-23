@@ -72,9 +72,10 @@ export const makeTypography = (): TypographyVariantsOptions => {
       letterSpacing: '0.25px'
     },
     button: {
-      fontSize: 16,
+      fontSize: 14,
       fontWeight: 500,
       lineHeight: 1.313,
+      letterSpacing: '0.1px',
       textTransform: 'inherit'
     },
     caption: {

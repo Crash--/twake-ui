@@ -268,8 +268,7 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
             props: { size: 'small' },
             style: {
               minHeight: 36,
-              padding: '9px 16px',
-              fontSize: theme.typography.pxToRem(13)
+              padding: '9px 16px'
             }
           },
           {
@@ -280,8 +279,7 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
             props: { size: 'large' },
             style: {
               minHeight: 48,
-              padding: '13px 32px',
-              fontSize: theme.typography.pxToRem(15)
+              padding: '13px 32px'
             }
           },
           {
