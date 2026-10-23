@@ -150,7 +150,7 @@ export const makePalette = (
       light: palette.Info[200],
       main: palette.Info[600],
       dark: palette.Info[700],
-      contrastText: '#fff'
+      contrastText: palette.Info.ContrastText
     },
     grey: {
       50: palette.Grey[50],

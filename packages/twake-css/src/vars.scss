@@ -36,7 +36,7 @@
   --twake-palette-info-light: #{p('Info', 200)};
   --twake-palette-info-main: #{p('Info', 600)};
   --twake-palette-info-dark: #{p('Info', 700)};
-  --twake-palette-info-contrastText: #fff;
+  --twake-palette-info-contrastText: #{p('Info', 'ContrastText')};
 
   --twake-palette-grey-50: #{p('Grey', 50)};
   --twake-palette-grey-100: #{p('Grey', 100)};
