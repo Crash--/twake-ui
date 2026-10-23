@@ -96,6 +96,7 @@ export const makePalette = (
         opacity: 0.48,
         ghostOpacity: 0.48
       },
+      neutral: { main: palette.Common.white },
       divider: alpha(palette.Common.white, 0.16),
       action: {
         active: palette.Common.white,
@@ -187,17 +188,18 @@ export const makePalette = (
       opacity: 0.32,
       ghostOpacity: 0.48
     },
-    divider: alpha(palette.Grey[900], 0.12),
+    neutral: { main: palette.Neutral[900] },
+    divider: alpha(palette.Neutral[900], 0.12),
     action: {
       active: alpha(palette.Grey[900], 0.56),
-      hover: alpha(palette.Grey[900], 0.04),
+      hover: alpha(palette.Neutral[900], 0.04),
       hoverOpacity: 0.04,
-      selected: alpha(palette.Grey[900], 0.08),
+      selected: alpha(palette.Neutral[900], 0.08),
       selectedOpacity: 0.18,
       disabled: alpha(palette.Grey[900], 0.24),
       disabledOpacity: 0.32,
       disabledBackground: alpha(palette.Grey[900], 0.12),
-      focus: alpha(palette.Grey[900], 0.12),
+      focus: alpha(palette.Neutral[900], 0.12),
       focusOpacity: 0.12,
       activatedOpacity: 0.12
     }

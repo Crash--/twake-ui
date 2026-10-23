@@ -39,6 +39,11 @@ export interface BorderPalette {
   ghostOpacity: number
 }
 
+// The tint of dividers and of the hover, selected and focus states
+export interface NeutralPalette {
+  main: string
+}
+
 // Typography Types
 export type TypographyOptions = TypographyVariantsOptions
 
@@ -95,10 +100,12 @@ declare module '@mui/material/styles' {
 
   interface Palette {
     border: BorderPalette
+    neutral: NeutralPalette
   }
 
   interface PaletteOptions {
     border?: Partial<BorderPalette>
+    neutral?: Partial<NeutralPalette>
   }
 }
 

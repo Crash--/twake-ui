@@ -8,6 +8,7 @@ import { Chapter, Code, Prose, Rail, Section, Swatch } from './shared'
 export const VARIABLE_GROUPS: [string, RegExp][] = [
   ['Text', /^--twake-palette-text-/],
   ['Action', /^--twake-palette-action-/],
+  ['Neutral', /^--twake-palette-neutral-/],
   ['Divider', /^--twake-palette-divider/],
   ['Border', /^--twake-palette-border-/],
   ['Background', /^--twake-palette-background-/],

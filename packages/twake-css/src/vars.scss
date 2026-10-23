@@ -75,17 +75,21 @@
   --twake-palette-border-opacity: 0.32;
   --twake-palette-border-ghostOpacity: 0.48;
 
-  --twake-palette-divider: #{rgba($ink, .12)};
+  $neutral: p('Neutral', 900);
+
+  --twake-palette-neutral-main: #{$neutral};
+
+  --twake-palette-divider: #{rgba($neutral, .12)};
 
   --twake-palette-action-active: #{rgba($ink, .56)};
-  --twake-palette-action-hover: #{rgba($ink, .04)};
+  --twake-palette-action-hover: #{rgba($neutral, .04)};
   --twake-palette-action-hoverOpacity: 0.04;
-  --twake-palette-action-selected: #{rgba($ink, .08)};
+  --twake-palette-action-selected: #{rgba($neutral, .08)};
   --twake-palette-action-selectedOpacity: 0.18;
   --twake-palette-action-disabled: #{rgba($ink, .24)};
   --twake-palette-action-disabledOpacity: 0.32;
   --twake-palette-action-disabledBackground: #{rgba($ink, .12)};
-  --twake-palette-action-focus: #{rgba($ink, .12)};
+  --twake-palette-action-focus: #{rgba($neutral, .12)};
   --twake-palette-action-focusOpacity: 0.12;
   --twake-palette-action-activatedOpacity: 0.12;
 
@@ -179,6 +183,8 @@
   --twake-palette-border-ghostDisabled: #{rgba($ink, .24)};
   --twake-palette-border-opacity: 0.48;
   --twake-palette-border-ghostOpacity: 0.48;
+
+  --twake-palette-neutral-main: #{$ink};
 
   --twake-palette-divider: #{rgba($ink, .16)};
 
