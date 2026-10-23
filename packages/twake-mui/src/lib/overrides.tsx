@@ -873,11 +873,16 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
           padding: 3
         },
         variants: [
+          // The design's 19.2px glyph in a 32px target, both states drawing
+          // the same 14.4px box
           {
             props: { size: 'small' },
             style: {
-              padding: 6,
-              '& svg.twake-icon': { width: 16, height: 16, padding: 2 }
+              padding: 6.4,
+              '& .MuiSvgIcon-root': {
+                fontSize: theme.typography.pxToRem(19.2)
+              },
+              '& svg.twake-icon': { width: 14.4, height: 14.4, padding: 2.4 }
             }
           }
         ]
