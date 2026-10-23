@@ -39,6 +39,10 @@ export interface BorderPalette {
   ghostOpacity: number
 }
 
+export interface Elevation {
+  level3: string
+}
+
 // Typography Types
 export type TypographyOptions = TypographyVariantsOptions
 
@@ -79,6 +83,16 @@ declare module '@mui/material/styles' {
   // does not type the option.
   interface ColorSystemOptions {
     shadows?: Shadows
+    elevation?: Elevation
+  }
+
+  // Emitted as --twake-elevation-*, read as theme.vars.elevation.*
+  interface ColorSystem {
+    elevation: Elevation
+  }
+
+  interface ThemeVars {
+    elevation: Elevation
   }
 
   interface CssThemeVariables {
@@ -112,6 +126,12 @@ declare module '@mui/material/Alert' {
   interface AlertPropsColorOverrides {
     primary: true
     secondary: true
+  }
+}
+
+declare module '@mui/material/Chip' {
+  interface ChipPropsVariantOverrides {
+    soft: true
   }
 }
 
