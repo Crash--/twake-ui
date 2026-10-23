@@ -25,7 +25,7 @@ const meta: Meta<typeof Chip> = {
     },
     variant: {
       control: 'select',
-      options: ['filled', 'outlined']
+      options: ['filled', 'outlined', 'soft']
     },
     disabled: {
       control: 'boolean'
@@ -61,7 +61,7 @@ export const Screenshot: Story = {
       'warning',
       'info'
     ] as const
-    const variants = ['filled', 'outlined'] as const
+    const variants = ['filled', 'outlined', 'soft'] as const
     const squareProps = [false, true] as const
     const sizeProps = ['small', 'medium'] as const
 
