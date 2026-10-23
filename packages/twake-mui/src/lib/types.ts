@@ -119,4 +119,8 @@ declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
     ghost: true
   }
+
+  interface ButtonPropsSizeOverrides {
+    xsmall: true
+  }
 }
