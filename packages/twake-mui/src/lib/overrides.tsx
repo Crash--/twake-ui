@@ -1069,6 +1069,7 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
     }
   },
   MuiTypography: {
+    defaultProps: { variantMapping: { body3: 'p' } },
     styleOverrides: {
       root: ({ theme }) => ({
         variants: [
