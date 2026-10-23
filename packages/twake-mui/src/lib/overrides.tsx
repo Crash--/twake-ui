@@ -15,6 +15,7 @@ import { accordionSummaryClasses } from '@mui/material/AccordionSummary'
 import { alertClasses } from '@mui/material/Alert'
 import { buttonClasses } from '@mui/material/Button'
 import { checkboxClasses } from '@mui/material/Checkbox'
+import { chipClasses } from '@mui/material/Chip'
 import { dialogTitleClasses } from '@mui/material/DialogTitle'
 import { formHelperTextClasses } from '@mui/material/FormHelperText'
 import { formLabelClasses } from '@mui/material/FormLabel'
@@ -676,9 +677,52 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
   },
   MuiChip: {
     styleOverrides: {
-      root: {
-        '&.square': {
-          borderRadius: radius.md
+      root: ({ theme }) => {
+        const { action } = theme.vars.palette
+        return {
+          '&.square': {
+            borderRadius: radius.md
+          },
+          variants: [
+            // A quick filter: neutral at rest, tinted with its colour once applied
+            {
+              props: { variant: 'soft' },
+              style: {
+                color: theme.vars.palette.text.primary,
+                backgroundColor: theme.vars.palette.background.default,
+                [`&.${chipClasses.clickable}:hover, &.${chipClasses.focusVisible}`]:
+                  { backgroundColor: action.selected }
+              }
+            },
+            ...radioColors.map(color => ({
+              props: { variant: 'soft' as const, color },
+              style: {
+                color: theme.vars.palette[color].main,
+                backgroundColor: theme.alpha(
+                  theme.vars.palette[color].main,
+                  action.selectedOpacity
+                ),
+                [`& .${chipClasses.icon}, & .${chipClasses.deleteIcon}`]: {
+                  color: 'inherit'
+                },
+                // MUI's coloured chips switch the delete icon to contrastText
+                [`& .${chipClasses.deleteIcon}:hover, & .${chipClasses.deleteIcon}:active`]:
+                  { color: 'inherit' },
+                [`&.${chipClasses.clickable}:hover`]: {
+                  backgroundColor: theme.alpha(
+                    theme.vars.palette[color].main,
+                    `${action.selectedOpacity} + ${action.hoverOpacity}`
+                  )
+                },
+                [`&.${chipClasses.focusVisible}`]: {
+                  backgroundColor: theme.alpha(
+                    theme.vars.palette[color].main,
+                    `${action.selectedOpacity} + ${action.focusOpacity}`
+                  )
+                }
+              }
+            }))
+          ]
         }
       }
     }
