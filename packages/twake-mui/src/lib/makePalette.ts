@@ -20,6 +20,10 @@ export const makePalette = (
   border: BorderPalette
 } => {
   const palette = deepmerge(paletteData, overrides)
+  // The design's stops; the yellow one sits past the right edge
+  const ai = {
+    gradient: `linear-gradient(90deg, ${alpha(palette.AiGradient.cyan, 0.9)} 0%, ${alpha(palette.AiGradient.pink, 0.9)} 77.8%, ${alpha(palette.AiGradient.yellow, 0.9)} 137%)`
+  }
 
   if (mode === 'dark') {
     return {
@@ -98,6 +102,7 @@ export const makePalette = (
       },
       neutral: { main: palette.Common.white },
       favorite: { main: palette.Favorite[400] },
+      ai,
       divider: alpha(palette.Common.white, 0.16),
       action: {
         active: palette.Common.white,
@@ -191,6 +196,7 @@ export const makePalette = (
     },
     neutral: { main: palette.Neutral[900] },
     favorite: { main: palette.Favorite[700] },
+    ai,
     divider: alpha(palette.Neutral[900], 0.12),
     action: {
       active: alpha(palette.Grey[900], 0.56),

@@ -81,6 +81,9 @@
 
   --twake-palette-favorite-main: #{p('Favorite', 700)};
 
+  // The design's stops, the same in both modes; the yellow one sits past the right edge
+  --twake-palette-ai-gradient: linear-gradient(90deg, #{rgba(p('AiGradient', 'cyan'), .9)} 0%, #{rgba(p('AiGradient', 'pink'), .9)} 77.8%, #{rgba(p('AiGradient', 'yellow'), .9)} 137%);
+
   --twake-palette-divider: #{rgba($neutral, .12)};
 
   --twake-palette-action-active: #{rgba($ink, .56)};

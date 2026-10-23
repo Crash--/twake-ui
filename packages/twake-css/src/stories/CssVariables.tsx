@@ -16,6 +16,7 @@ export const VARIABLE_GROUPS: [string, RegExp][] = [
   ['Secondary', /^--twake-palette-secondary-/],
   ['Status', /^--twake-palette-(error|warning|info|success)-/],
   ['Favorite', /^--twake-palette-favorite-/],
+  ['AI', /^--twake-palette-ai-/],
   ['Common', /^--twake-palette-common-/],
   ['Grey', /^--twake-palette-grey-/]
 ]

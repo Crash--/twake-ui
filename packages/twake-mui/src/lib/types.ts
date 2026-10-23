@@ -45,6 +45,11 @@ export interface MainPalette {
   main: string
 }
 
+// The left to right gradient of AI features, a CSS background image
+export interface AiPalette {
+  gradient: string
+}
+
 // Typography Types
 export type TypographyOptions = TypographyVariantsOptions
 
@@ -103,12 +108,14 @@ declare module '@mui/material/styles' {
     border: BorderPalette
     neutral: MainPalette
     favorite: MainPalette
+    ai: AiPalette
   }
 
   interface PaletteOptions {
     border?: Partial<BorderPalette>
     neutral?: Partial<MainPalette>
     favorite?: Partial<MainPalette>
+    ai?: Partial<AiPalette>
   }
 }
 

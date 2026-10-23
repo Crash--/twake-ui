@@ -105,6 +105,11 @@
     "400": "#FFCA28",
     "700": "#B78000"
   },
+  "AiGradient": {
+    "cyan": "#00B7FF",
+    "pink": "#E06DD1",
+    "yellow": "#FFFF00"
+  },
   "Common": {
     "white": "#fff",
     "black": "#000"
