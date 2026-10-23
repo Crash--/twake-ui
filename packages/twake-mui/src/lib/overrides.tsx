@@ -262,6 +262,21 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
               }
             }
           })),
+          {
+            props: { size: 'xsmall' },
+            style: {
+              minWidth: 'auto',
+              minHeight: 24,
+              padding: '4px 8px',
+              fontSize: theme.typography.pxToRem(11),
+              lineHeight: '16px',
+              letterSpacing: '0.5px'
+            }
+          },
+          {
+            props: { size: 'xsmall', variant: 'outlined' },
+            style: { padding: '3px 7px' }
+          },
           // Vertical paddings sit 1px under cozy-ui's so the outlined border
           // still fits the fixed heights cozy-ui forces (36, 40, 48).
           {
@@ -303,6 +318,10 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
           },
           {
             props: { loadingPosition: 'end', variant: 'text' },
+            style: { right: 8 }
+          },
+          {
+            props: { loadingPosition: 'end', size: 'xsmall' },
             style: { right: 8 }
           },
           {
