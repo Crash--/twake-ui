@@ -97,6 +97,7 @@ export const makePalette = (
         ghostOpacity: 0.48
       },
       neutral: { main: palette.Common.white },
+      favorite: { main: palette.Favorite[400] },
       divider: alpha(palette.Common.white, 0.16),
       action: {
         active: palette.Common.white,
@@ -189,6 +190,7 @@ export const makePalette = (
       ghostOpacity: 0.48
     },
     neutral: { main: palette.Neutral[900] },
+    favorite: { main: palette.Favorite[700] },
     divider: alpha(palette.Neutral[900], 0.12),
     action: {
       active: alpha(palette.Grey[900], 0.56),

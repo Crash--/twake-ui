@@ -79,6 +79,8 @@
 
   --twake-palette-neutral-main: #{$neutral};
 
+  --twake-palette-favorite-main: #{p('Favorite', 700)};
+
   --twake-palette-divider: #{rgba($neutral, .12)};
 
   --twake-palette-action-active: #{rgba($ink, .56)};
@@ -185,6 +187,8 @@
   --twake-palette-border-ghostOpacity: 0.48;
 
   --twake-palette-neutral-main: #{$ink};
+
+  --twake-palette-favorite-main: #{p('Favorite', 400)};
 
   --twake-palette-divider: #{rgba($ink, .16)};
 

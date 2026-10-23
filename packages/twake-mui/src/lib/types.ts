@@ -39,8 +39,9 @@ export interface BorderPalette {
   ghostOpacity: number
 }
 
-// The tint of dividers and of the hover, selected and focus states
-export interface NeutralPalette {
+// A role with a single colour: neutral (dividers and state tints), favorite
+// (the filled star)
+export interface MainPalette {
   main: string
 }
 
@@ -100,12 +101,14 @@ declare module '@mui/material/styles' {
 
   interface Palette {
     border: BorderPalette
-    neutral: NeutralPalette
+    neutral: MainPalette
+    favorite: MainPalette
   }
 
   interface PaletteOptions {
     border?: Partial<BorderPalette>
-    neutral?: Partial<NeutralPalette>
+    neutral?: Partial<MainPalette>
+    favorite?: Partial<MainPalette>
   }
 }
 

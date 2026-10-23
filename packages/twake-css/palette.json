@@ -101,6 +101,10 @@
     "900": "#1D192B",
     "ContrastText": "#fff"
   },
+  "Favorite": {
+    "400": "#FFCA28",
+    "700": "#B78000"
+  },
   "Common": {
     "white": "#fff",
     "black": "#000"
