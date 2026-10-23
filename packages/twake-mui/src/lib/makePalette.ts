@@ -123,10 +123,10 @@ export const makePalette = (
       contrastText: palette.Primary.ContrastText
     },
     secondary: {
-      light: palette.Secondary[200],
-      main: palette.Secondary[600],
-      dark: palette.Secondary[700],
-      contrastText: palette.Secondary.ContrastText
+      light: palette.Neutral[400],
+      main: palette.Neutral[600],
+      dark: palette.Neutral[800],
+      contrastText: palette.Neutral.ContrastText
     },
     error: {
       light: palette.Error[200],
