@@ -1,3 +1,10 @@
+## @linagora/twake-mui [18.4.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.4.0...@linagora/twake-mui@18.4.1) (2026-10-23)
+
+
+### Bug Fixes
+
+* **twake-mui:** Allow select NavDesktopDropdown by keyboard ([733c7d1](https://github.com/linagora/twake-ui/commit/733c7d1f81729383d68e190b014b1645efc3d5f9))
+
 # @linagora/twake-mui [18.4.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.3.0...@linagora/twake-mui@18.4.0) (2026-10-22)
 
 
