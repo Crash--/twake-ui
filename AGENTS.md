@@ -32,6 +32,10 @@ npm run release:dry
   `twake-icons`)
 - **Package naming**: All packages use `@linagora/` scope
 - **Build output**: Each package outputs to `dist/` (TypeScript compilation)
+- **Dependency versions**: exact versions for external packages
+  (`npm install --save-exact`), caret ranges for internal ones (`@linagora/*`,
+  `cozy-*`, `twake-*`); `peerDependencies` keep their ranges. See "Dependency
+  versions" in the README.
 
 ## Colors
 

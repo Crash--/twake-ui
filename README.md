@@ -58,6 +58,15 @@ To run a script in a specific package:
 npm run <script> --workspace=twake-mui
 ```
 
+### Dependency versions
+
+In `dependencies` and `devDependencies`:
+
+- external packages use an exact version (`"vite": "8.3.1"`), so add them with `npm install --save-exact`;
+- internal packages (`@linagora/*`, `cozy-*`, `twake-*`) use a caret range (`"cozy-minilog": "^3.10.1"`).
+
+`peerDependencies` keep ranges: they constrain the apps that install the package (see [Depending on a new version of another package](#depending-on-a-new-version-of-another-package)).
+
 ## Release Management
 
 This monorepo uses **multi-semantic-release** with independent versioning for each package. The release process is fully automated via GitHub Actions.
