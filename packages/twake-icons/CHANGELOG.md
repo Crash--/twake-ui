@@ -1,3 +1,12 @@
+# @linagora/twake-icons [2.17.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.16.1...@linagora/twake-icons@2.17.0) (2026-10-27)
+
+
+### Features
+
+* **twake-icons:** Add editor and composer icons ([867d1e9](https://github.com/linagora/twake-ui/commit/867d1e9f18eb0c7e972dc23c9f473c4de8c5484b))
+* **twake-icons:** Add mail folder icons ([d5d6065](https://github.com/linagora/twake-ui/commit/d5d6065f7b65ac1c8132b1d14b9cee9381c29f73))
+* **twake-icons:** Add mail message action icons ([444fdec](https://github.com/linagora/twake-ui/commit/444fdecea6919f045066ccfd014e953a57508050))
+
 ## @linagora/twake-icons [2.16.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.16.0...@linagora/twake-icons@2.16.1) (2026-10-27)
 
 
