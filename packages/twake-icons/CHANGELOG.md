@@ -1,3 +1,10 @@
+## @linagora/twake-icons [2.16.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.16.0...@linagora/twake-icons@2.16.1) (2026-10-27)
+
+
+### Bug Fixes
+
+* **twake-icons:** Keep the AssistantColor star transparent ([1e045af](https://github.com/linagora/twake-ui/commit/1e045afd34e327ff42fdf4d551d38a0cf22700b3))
+
 # @linagora/twake-icons [2.16.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.15.0...@linagora/twake-icons@2.16.0) (2026-10-21)
 
 
