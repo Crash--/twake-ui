@@ -1,3 +1,10 @@
+# @linagora/twake-css [1.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-css@1.0.0...@linagora/twake-css@1.1.0) (2026-10-27)
+
+
+### Features
+
+* **twake-css:** Make the Secondary ramp the grey of the design ([aefb3b3](https://github.com/linagora/twake-ui/commit/aefb3b3729d2a5a48a0037612f1f99c67bc0b6f0))
+
 # @linagora/twake-css 1.0.0 (2026-09-22)
 
 
