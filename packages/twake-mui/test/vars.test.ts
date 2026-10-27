@@ -25,6 +25,14 @@ const normalize = (value: unknown): string =>
     .replace(/\s+/g, ' ')
     .trim()
 
+// twake-css 1.2.0 moves these ahead of the theme; twake-mui follows in
+// linagora/twake-ui#204, which removes this list.
+const AHEAD_OF_THE_THEME = new Set([
+  'light --twake-palette-secondary-light',
+  'light --twake-palette-action-selectedOpacity',
+  'dark --twake-palette-action-selectedOpacity'
+])
+
 describe('twake-css/dist/vars.css', () => {
   const require = createRequire(import.meta.url)
   const vars = parseCss(
@@ -45,6 +53,7 @@ describe('twake-css/dist/vars.css', () => {
       // Sass drops the quotes: [data-theme=dark] and :root:not([data-theme=light]).
       const mode = /dark|:not\(/.test(selector) ? 'dark' : 'light'
       for (const [name, value] of Object.entries(decls)) {
+        if (AHEAD_OF_THE_THEME.has(`${mode} ${name}`)) continue
         expect(normalize(emitted[mode][name]), `${name} in ${mode} mode`).toBe(
           normalize(value)
         )
