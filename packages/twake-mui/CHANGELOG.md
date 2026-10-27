@@ -1,3 +1,17 @@
+# @linagora/twake-mui [18.5.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.4.1...@linagora/twake-mui@18.5.0) (2026-10-27)
+
+
+### Bug Fixes
+
+* **twake-mui:** Take the line heights and tracking of the small styles from the design ([bab4fa1](https://github.com/linagora/twake-ui/commit/bab4fa147fd55735c8e4396c364e19bc696099db))
+
+
+### Features
+
+* **twake-mui:** Add a body3 typography variant ([b1110b3](https://github.com/linagora/twake-ui/commit/b1110b328f29ad49714b138cceaf887236dad667))
+* **twake-mui:** Add an xsmall Button size ([6ca4db8](https://github.com/linagora/twake-ui/commit/6ca4db8105c37d87bec419b8a4bfe563e4d40098))
+* **twake-mui:** Set the button text to 14px at every size ([6587b37](https://github.com/linagora/twake-ui/commit/6587b377eea92cece727309b3ff76cec8e8dfd3e))
+
 ## @linagora/twake-mui [18.4.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.4.0...@linagora/twake-mui@18.4.1) (2026-10-23)
 
 
