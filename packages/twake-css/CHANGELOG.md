@@ -1,3 +1,11 @@
+# @linagora/twake-css [1.2.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-css@1.1.0...@linagora/twake-css@1.2.0) (2026-10-28)
+
+
+### Features
+
+* **twake-css:** Read the light secondary from Secondary 100 ([df652db](https://github.com/linagora/twake-ui/commit/df652dbb1c00cacef6be77f45614fa47ec31b287))
+* **twake-css:** Tint selected items with 8% of their colour ([929e826](https://github.com/linagora/twake-ui/commit/929e826f5a2a14a969866b8004bf046cceb93a9a))
+
 # @linagora/twake-css [1.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-css@1.0.0...@linagora/twake-css@1.1.0) (2026-10-27)
 
 
