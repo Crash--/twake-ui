@@ -27,7 +27,7 @@ const StyledPopoverContent = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   gap: theme.spacing(2),
   position: 'relative',
-  minWidth: 320
+  minWidth: 'min(320px, calc(100vw - 32px))'
 }))
 
 const CloseButton = styled(IconButton)(() => ({
@@ -192,7 +192,7 @@ const ContactPopover: ContactPopoverComponent = ({
             elevation: 4,
             sx: {
               borderRadius: 2,
-              maxWidth: 400
+              maxWidth: 'min(400px, calc(100% - 32px))'
             },
             onMouseEnter: openOnHover ? handlePopoverMouseEnter : undefined,
             onMouseLeave: openOnHover ? handleMouseLeave : undefined
