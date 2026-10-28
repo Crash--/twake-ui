@@ -1,3 +1,10 @@
+## @linagora/twake-mui [19.0.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@19.0.0...@linagora/twake-mui@19.0.1) (2026-10-28)
+
+
+### Bug Fixes
+
+* **twake-mui:** Resolve left edge overflow of ContactPopover ([2a82c31](https://github.com/linagora/twake-ui/commit/2a82c31020ac77c692cfc26ad64b43e0ab7654d3))
+
 # @linagora/twake-mui [19.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.5.0...@linagora/twake-mui@19.0.0) (2026-10-28)
 
 
