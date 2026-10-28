@@ -1,3 +1,21 @@
+# @linagora/twake-mui [19.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.5.0...@linagora/twake-mui@19.0.0) (2026-10-28)
+
+
+* build(twake-mui)!: Require @linagora/twake-css 1.1.0 ([eb84e76](https://github.com/linagora/twake-ui/commit/eb84e768815e9635a2326a72754c6236770b975b))
+
+
+### Features
+
+* **twake-mui:** Read the light secondary from Secondary 100 ([6c66be6](https://github.com/linagora/twake-ui/commit/6c66be63ad34354b0a3b35e1b55a736714876d55))
+* **twake-mui:** Tint selected items with 8% of their colour ([aac9b45](https://github.com/linagora/twake-ui/commit/aac9b45f5a12e9a84513de939d636fc0aa01034a))
+
+
+### BREAKING CHANGES
+
+* you now need "@linagora/twake-css": ">=1.1.0".
+An app that upgrades twake-mui and keeps twake-css 1.0.0 gets a blue
+secondary colour.
+
 # @linagora/twake-mui [18.5.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@18.4.1...@linagora/twake-mui@18.5.0) (2026-10-27)
 
 
