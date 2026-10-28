@@ -175,7 +175,11 @@ const ExampleBottomSheet: React.FC<ExampleArgs> = args => {
               </Button>
 
               {isSecondOpen && (
-                <BottomSheet backdrop onClose={() => setIsSecondOpen(false)}>
+                <BottomSheet
+                  backdrop
+                  onClose={() => setIsSecondOpen(false)}
+                  aria-label="Second sheet"
+                >
                   <BottomSheetItem>{shortContent}</BottomSheetItem>
                 </BottomSheet>
               )}

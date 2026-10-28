@@ -51,7 +51,12 @@ const ActionsMenuWrapper = ({
     if (!open) return null
 
     return (
-      <BottomSheet backdrop onClose={onClose}>
+      <BottomSheet
+        backdrop
+        onClose={onClose}
+        aria-label={props['aria-label']}
+        aria-labelledby={props['aria-labelledby']}
+      >
         <Paper square>
           {Children.map(children, child =>
             isValidElement<ItemProps>(child)

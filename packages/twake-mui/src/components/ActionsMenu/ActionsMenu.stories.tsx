@@ -149,6 +149,7 @@ const ExampleActionsMenu = ({
         disablePortal={defaultOpen}
         disableScrollLock={defaultOpen}
         onClose={() => setIsOpen(false)}
+        aria-label="File actions"
       >
         <MobileHeader />
       </ActionsMenu>
@@ -183,6 +184,7 @@ const ExampleManualActionsMenu = ({
           disablePortal={defaultOpen}
           disableScrollLock={defaultOpen}
           onClose={() => setIsOpen(false)}
+          aria-label="Contact actions"
         >
           <MobileHeader />
           <ActionsMenuItem autoFocus>
