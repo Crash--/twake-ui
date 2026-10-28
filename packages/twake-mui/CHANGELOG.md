@@ -1,3 +1,10 @@
+# @linagora/twake-mui [19.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@19.0.1...@linagora/twake-mui@19.1.0) (2026-10-28)
+
+
+### Features
+
+* **twake-mui:** Size the small Checkbox as the design ([5234ff4](https://github.com/linagora/twake-ui/commit/5234ff4b79cf517071414d24b1781b0f8bb516b8))
+
 ## @linagora/twake-mui [19.0.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@19.0.0...@linagora/twake-mui@19.0.1) (2026-10-28)
 
 
