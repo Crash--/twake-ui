@@ -1,3 +1,26 @@
+# @linagora/twake-icons [3.0.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.17.0...@linagora/twake-icons@3.0.0) (2026-10-29)
+
+
+### Bug Fixes
+
+* **twake-icons:** Generate the Cube and Spinner props ([e15774c](https://github.com/linagora/twake-ui/commit/e15774c33a01d5addd73c827434336cfa8843763))
+* **twake-icons:** Remove the root fill of the ManageSearch source ([1bffb58](https://github.com/linagora/twake-ui/commit/1bffb584ab66c2221bdd6428caefc574be82fd7d))
+* **twake-icons:** Rename permission icons that shadow other icons ([fcca309](https://github.com/linagora/twake-ui/commit/fcca3091521e38d73498457dccfe35c5e38fcbec))
+* **twake-icons:** Run svgo until the SVGs stop changing ([202328f](https://github.com/linagora/twake-ui/commit/202328fbf9b25cc28527dfeeddef5cd7fd504620))
+* **twake-icons:** Skip animated icons in npm run svgo ([8a6b503](https://github.com/linagora/twake-ui/commit/8a6b503291f0fc3b5303fd44c434dc0b835e2298))
+
+
+### BREAKING CHANGES
+
+* **twake-icons:** Bill, Calendar, Certified, Contract, Home, Location
+and Safe now render the ui icon, and Contacts the illus one. The old
+permission drawings are exported as BillPermissions,
+CalendarPermissions, CertifiedPermissions, ContactsPermissions,
+ContractPermissions, HomePermissions, LocationPermissions and
+SafePermissions, which no longer render the 16px Twake drawings.
+
+Assisted-by: LLM
+
 # @linagora/twake-icons [2.17.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-icons@2.16.1...@linagora/twake-icons@2.17.0) (2026-10-27)
 
 
