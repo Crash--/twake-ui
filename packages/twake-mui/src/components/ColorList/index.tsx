@@ -15,14 +15,21 @@ import { useBreakpoints } from '../../hooks/useBreakpoints'
 import Avatar from '../Avatar'
 import { COLORS, normalizeHexColor } from './helpers'
 
+// `touch` is the area a finger hits: 44 px when the gap has room for it, else
+// the whole pitch, so that two colors never overlap
 const sizes = {
-  small: { avatar: 21, icon: 10, cols: 7, gap: 5 },
-  medium: { avatar: 41, icon: 16, cols: 5, gap: 16 }
+  small: { avatar: 21, icon: 10, cols: 7, gap: 5, touch: 26 },
+  medium: { avatar: 41, icon: 16, cols: 5, gap: 16, touch: 44 }
 }
+
+const TOUCH_MEDIA = '@media (pointer: coarse)'
 
 const ColorListRoot = styled(ImageList)({
   margin: 0,
-  [`& .${imageListItemClasses.root}`]: { alignItems: 'center' }
+  [`& .${imageListItemClasses.root}`]: { alignItems: 'center' },
+  // Room for the touch areas, which go past the edges of the list while it
+  // stays scrollable, as `overflow: visible` would not
+  [TOUCH_MEDIA]: { padding: 4, margin: -4 }
 })
 
 export type ColorListSize = keyof typeof sizes
@@ -126,8 +133,18 @@ const ColorList: React.FC<ColorListProps> = ({
   const hasError =
     input?.showError === true && !isValid && input.errorText !== undefined
   const { isMobile } = useBreakpoints()
-  const { avatar, icon, cols, gap } =
+  const { avatar, icon, cols, gap, touch } =
     sizes[size ?? (isMobile ? 'medium' : 'small')]
+  // `inset` starts inside a border: the custom button has one of 1 px
+  const makeTouchAreaSx = (border: number): Record<string, object> => ({
+    [TOUCH_MEDIA]: {
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        inset: (avatar - touch) / 2 - border
+      }
+    }
+  })
 
   return (
     <>
@@ -137,6 +154,7 @@ const ColorList: React.FC<ColorListProps> = ({
             <ButtonBase
               component="div"
               className="u-bdrs-circle"
+              sx={makeTouchAreaSx(0)}
               aria-label={getColorLabel?.(color) ?? color}
               aria-pressed={shownColor === color}
               onClick={() => {
@@ -168,7 +186,8 @@ const ColorList: React.FC<ColorListProps> = ({
                 backgroundImage:
                   'linear-gradient(#fff, #fff), conic-gradient(from 0deg, #FB2C36, #AD46FF, #2B7FFF, #FB2C36)',
                 backgroundOrigin: 'border-box',
-                backgroundClip: 'padding-box, border-box'
+                backgroundClip: 'padding-box, border-box',
+                ...makeTouchAreaSx(1)
               }}
             >
               <Icon icon={Palette} size={icon} color="#000" />
