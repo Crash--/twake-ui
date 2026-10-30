@@ -1,3 +1,11 @@
+## @linagora/twake-mui [19.1.1](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@19.1.0...@linagora/twake-mui@19.1.1) (2026-10-30)
+
+
+### Bug Fixes
+
+* **twake-mui:** Accept twake-icons 3 in the devDependencies ([8acf30d](https://github.com/linagora/twake-ui/commit/8acf30d5f075c38a2350d318702bb5532d48ef9f))
+* **twake-mui:** Make the bottom sheet with a backdrop a modal dialog ([d800447](https://github.com/linagora/twake-ui/commit/d800447bd1dc29efc01c4c3f4bfd5f165aeb2390))
+
 # @linagora/twake-mui [19.1.0](https://github.com/linagora/twake-ui/compare/@linagora/twake-mui@19.0.1...@linagora/twake-mui@19.1.0) (2026-10-28)
 
 

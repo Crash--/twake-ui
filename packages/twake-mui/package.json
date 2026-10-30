@@ -1,7 +1,7 @@
 {
   "name": "@linagora/twake-mui",
   "type": "module",
-  "version": "19.1.0",
+  "version": "19.1.1",
   "description": "MUI v9 theme system for Twake applications",
   "author": "Twake",
   "license": "MIT",
@@ -78,7 +78,7 @@
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@linagora/twake-css": "^1.1.0",
-    "@linagora/twake-icons": "^2.10.0",
+    "@linagora/twake-icons": "^3.0.0",
     "@mui/icons-material": "9.2.0",
     "@mui/lab": "9.0.0-beta.6",
     "@mui/material": "9.2.0",
