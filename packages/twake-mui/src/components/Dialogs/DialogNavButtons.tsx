@@ -2,7 +2,10 @@ import React from 'react'
 
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
-import type { DialogLayoutProps } from './useDialogLayout'
+import type {
+  DialogLayoutComponentsProps,
+  DialogLayoutProps
+} from './useDialogLayout'
 
 export interface DialogNavButtonsProps extends Pick<
   DialogLayoutProps,
@@ -10,22 +13,33 @@ export interface DialogNavButtonsProps extends Pick<
 > {
   id: string
   fullScreen: boolean
+  componentsProps?: Pick<
+    DialogLayoutComponentsProps,
+    'closeButton' | 'backButton'
+  >
 }
 
-/** Close and back buttons of a dialog. On full screen, a single back button calls `onBack`, or `onClose` without it */
+/**
+ * Close and back buttons of a dialog. On full screen, a single back button calls `onBack`, or `onClose` without it.
+ * It then takes the props of the button whose action it does, `backButton` or `closeButton`.
+ */
 const DialogNavButtons = ({
   id,
   fullScreen,
   onClose,
-  onBack
+  onBack,
+  componentsProps
 }: DialogNavButtonsProps): React.ReactElement | null => {
   const onBackOrClose = onBack ?? onClose
 
   if (fullScreen) {
     return onBackOrClose ? (
       <DialogBackButton
-        onClick={onBackOrClose}
         data-testid={`modal-backclose-button-${id}`}
+        {...(onBack
+          ? componentsProps?.backButton
+          : componentsProps?.closeButton)}
+        onClick={onBackOrClose}
       />
     ) : null
   }
@@ -34,14 +48,16 @@ const DialogNavButtons = ({
     <>
       {onClose && (
         <DialogCloseButton
-          onClick={onClose}
           data-testid={`modal-close-button-${id}`}
+          {...componentsProps?.closeButton}
+          onClick={onClose}
         />
       )}
       {onBack && (
         <DialogBackButton
-          onClick={onBack}
           data-testid={`modal-back-button-${id}`}
+          {...componentsProps?.backButton}
+          onClick={onBack}
         />
       )}
     </>

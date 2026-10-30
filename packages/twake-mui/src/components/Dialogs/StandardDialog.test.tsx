@@ -49,4 +49,42 @@ describe('StandardDialog', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Back' }))
     expect(onClose).toHaveBeenCalledTimes(1)
   })
+
+  it('passes its props to the close and back buttons', () => {
+    const onClose = vi.fn()
+    const onBack = vi.fn()
+    setup({
+      onClose,
+      onBack,
+      componentsProps: {
+        closeButton: { 'data-testid': 'close' },
+        backButton: { 'data-testid': 'back' }
+      }
+    })
+
+    fireEvent.click(screen.getByTestId('close'))
+    expect(onClose).toHaveBeenCalledTimes(1)
+
+    fireEvent.click(screen.getByTestId('back'))
+    expect(onBack).toHaveBeenCalledTimes(1)
+  })
+
+  it('tags the button of a full screen dialog after what it does', () => {
+    const componentsProps = {
+      closeButton: { 'data-testid': 'close' },
+      backButton: { 'data-testid': 'back' }
+    }
+    setup({ onClose: vi.fn(), fullScreen: true, componentsProps })
+    expect(screen.queryByTestId('close')).not.toBe(null)
+    cleanup()
+
+    setup({
+      onClose: vi.fn(),
+      onBack: vi.fn(),
+      fullScreen: true,
+      componentsProps
+    })
+    expect(screen.queryByTestId('back')).not.toBe(null)
+    expect(screen.queryByTestId('close')).toBe(null)
+  })
 })

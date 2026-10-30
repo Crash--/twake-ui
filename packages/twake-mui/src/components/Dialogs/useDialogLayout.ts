@@ -3,7 +3,8 @@ import {
   DialogContentProps,
   DialogTitleProps,
   DividerProps,
-  Grow
+  Grow,
+  IconButtonProps
 } from '@mui/material'
 import { mergeSlotProps } from '@mui/material/utils'
 import cx from 'classnames'
@@ -15,11 +16,20 @@ import SlideUpTransition from './SlideUpTransition'
 
 export type DialogCloseReason = 'backdropClick' | 'escapeKeyDown'
 
+export interface DialogNavButtonComponentProps extends Omit<
+  IconButtonProps,
+  'onClick'
+> {
+  'data-testid'?: string
+}
+
 export interface DialogLayoutComponentsProps {
   dialogTitle?: DialogTitleProps
   divider?: DividerProps
   dialogActions?: DialogActionsProps
   dialogContent?: DialogContentProps
+  closeButton?: DialogNavButtonComponentProps
+  backButton?: DialogNavButtonComponentProps
 }
 
 export interface DialogLayoutProps extends Omit<

@@ -39,6 +39,7 @@ const IllustrationDialog = ({
         fullScreen={fullScreen}
         onClose={props.onClose}
         onBack={props.onBack}
+        componentsProps={props.componentsProps}
       />
       <DialogContent {...dialogContentProps}>
         <DialogFluidContent

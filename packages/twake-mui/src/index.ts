@@ -269,7 +269,8 @@ export type {
   DialogCloseReason,
   DialogLayout,
   DialogLayoutComponentsProps,
-  DialogLayoutProps
+  DialogLayoutProps,
+  DialogNavButtonComponentProps
 } from './components/Dialogs/useDialogLayout'
 export type {
   PointerAlertProps,

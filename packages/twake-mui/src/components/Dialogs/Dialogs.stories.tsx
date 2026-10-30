@@ -334,6 +334,21 @@ export const Default: Story = {
   render: args => <Playground {...args} />
 }
 
+/** `componentsProps.closeButton` and `backButton` reach the buttons, here their test ids */
+export const NavButtonsProps: Story = {
+  render: () => (
+    <FixedDialog
+      {...screenshotProps}
+      title="FixedDialog"
+      onBack={noop}
+      componentsProps={{
+        closeButton: { 'data-testid': 'my-close-button' },
+        backButton: { 'data-testid': 'my-back-button' }
+      }}
+    />
+  )
+}
+
 const screenshotProps = {
   open: true,
   onClose: noop,
