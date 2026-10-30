@@ -40,6 +40,24 @@ describe('StandardDialog', () => {
     expect(onClose).toHaveBeenCalledTimes(1)
   })
 
+  it('names its close and back buttons in Mongolian', () => {
+    render(
+      <ThemeProvider theme={theme}>
+        <I18n lang="mn" dictRequire={() => ({})}>
+          <StandardDialog
+            open
+            title="Title"
+            onClose={vi.fn()}
+            onBack={vi.fn()}
+          />
+        </I18n>
+      </ThemeProvider>
+    )
+
+    expect(screen.queryByRole('button', { name: 'Хаах' })).not.toBe(null)
+    expect(screen.queryByRole('button', { name: 'Буцах' })).not.toBe(null)
+  })
+
   it('closes from the back button on full screen', () => {
     const onClose = vi.fn()
     setup({ onClose, fullScreen: true })
