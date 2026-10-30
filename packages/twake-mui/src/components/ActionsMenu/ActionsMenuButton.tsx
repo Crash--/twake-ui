@@ -5,6 +5,7 @@ import { Dots, Icon } from '@linagora/twake-icons'
 import { useExtendI18n, useI18n } from 'twake-i18n'
 
 import ActionsMenu from '.'
+import { useBreakpoints } from '../../hooks/useBreakpoints'
 import { locales } from './locales'
 import { ActionDocument, ActionObject } from './types'
 
@@ -21,6 +22,7 @@ const ActionsMenuButton = ({
   const actionsRef = useRef<HTMLButtonElement>(null)
   useExtendI18n(locales)
   const { t } = useI18n()
+  const { isMobile } = useBreakpoints()
 
   return (
     <>
@@ -28,6 +30,8 @@ const ActionsMenuButton = ({
         <IconButton
           ref={actionsRef}
           aria-label={t('ActionsMenu.menu')}
+          aria-haspopup={isMobile ? 'dialog' : 'menu'}
+          aria-expanded={showActions}
           onClick={() => setShowActions(true)}
         >
           <Icon icon={Dots} />
