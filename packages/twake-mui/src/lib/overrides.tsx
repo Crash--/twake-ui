@@ -1225,7 +1225,20 @@ export const overrides: NonNullable<ThemeOptions['components']> = {
     styleOverrides: {
       root: {
         padding: '8px 16px',
-        variants: alertSeverityVariants
+        variants: alertSeverityVariants,
+        // `actionPlacement="bottom"` of the `Alert` component: the action on
+        // a row of its own under the message, starting at the icon
+        '&.Alert-actionBottom': {
+          flexWrap: 'wrap',
+          [`& .${alertClasses.message}`]: { flex: '1 1 0', minWidth: 0 },
+          [`& .${alertClasses.action}`]: {
+            flexBasis: '100%',
+            flexWrap: 'wrap',
+            justifyContent: 'flex-start',
+            margin: 0,
+            padding: 0
+          }
+        }
       },
       icon: {
         paddingTop: '9px'

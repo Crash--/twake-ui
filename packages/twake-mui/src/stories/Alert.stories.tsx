@@ -13,6 +13,8 @@ import React from 'react'
 
 import { Dots, Download, Icon } from '@linagora/twake-icons'
 
+import TwakeAlert from '../components/Alert'
+
 const severities = [
   'primary',
   'secondary',
@@ -162,6 +164,52 @@ export const Screenshot: Story = {
           </Alert>
         </Stack>
       </section>
+    </Stack>
+  )
+}
+
+/** The action under the message, for a narrow screen (`actionPlacement="bottom"`) */
+export const ActionBelow: Story = {
+  tags: ['argos'],
+  render: () => (
+    <Stack spacing={2} sx={{ width: 360 }}>
+      <TwakeAlert
+        severity="secondary"
+        actionPlacement="bottom"
+        action={
+          <Button variant="text" size="small">
+            Empty trash now
+          </Button>
+        }
+      >
+        All messages in Trash will be deleted if you reach limited storage.
+      </TwakeAlert>
+      <TwakeAlert
+        severity="secondary"
+        actionPlacement="bottom"
+        action={
+          <>
+            <Button variant="text" size="small">
+              Show
+            </Button>
+            <Button variant="text" size="small">
+              Always show for this sender
+            </Button>
+          </>
+        }
+      >
+        Remote images hidden to protect your privacy
+      </TwakeAlert>
+      <TwakeAlert
+        severity="secondary"
+        action={
+          <Button variant="text" size="small">
+            Show
+          </Button>
+        }
+      >
+        The default placement, beside the message
+      </TwakeAlert>
     </Stack>
   )
 }
