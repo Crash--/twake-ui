@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import React from 'react'
 
 import { getPlainTextFromMarkdown } from './helpers'
+import mountains from './images/mountains.png'
 import Markdown from './index'
 
 const content = `
@@ -53,7 +54,7 @@ __Bold and Italic Text__
 
 ## Images
 
-![Mountains](https://picsum.photos/id/1018/400/200 "Mountains")
+![Mountains](${mountains} "Mountains")
 
 ## Code
 
