@@ -66,6 +66,62 @@ them.
   opacity tokens (`theme.alpha(color, theme.vars.palette.action.selectedOpacity)`),
   so state tints follow one value.
 
+## Conventions
+
+These rules apply to the code you write; older code predates some of them.
+
+### API and scope
+
+- When cozy-ui already has an API for the need, reuse it (prop name, values,
+  default) and extend it so existing values keep their meaning. Open the
+  matching change on cozy-ui in its own PR, for the apps still on it.
+- Add a variant to a component only when more than one screen uses it, or when
+  the Figma library makes it a component of its own. A look for a single screen
+  comes from the designer as an asset (an illustration) passed in as is.
+- Build on what MUI and MUI X already do, themed here (overrides,
+  `defaultProps`, a provider), before writing a component of your own. A
+  wrapper earns its place only for a real composition (a date and a time
+  sharing one value).
+- Put a context-based library in `peerDependencies`, so the app and twake-mui
+  share one copy, and mount its provider apart from `ThemeProvider`, so apps
+  that do not use it do not load it. Make it optional (`peerDependenciesMeta`)
+  only when its provider has its own subpath export: from the `"."` entry, apps
+  without the library would rely on tree-shaking. This is the target for
+  `@mui/x-date-pickers` and `date-fns`, today in `devDependencies` with no
+  provider.
+- Fix a bug everywhere it occurs: move the fix into a shared helper and call it
+  from each place.
+
+### Code
+
+- Default-export each new component, and export it from its own file in
+  `src/index.ts` rather than through another component's `index.tsx`.
+- Export only what other files import.
+- Put callback props (`onX`) last, grouped, in the props interface, the
+  destructuring and every call site.
+- Name the variant classes the overrides target bare (`.square`, `.small`).
+- Hold a class name repeated in a component's styles in a constant, like
+  `ICON_CLASS_NAME` in `Empty`, so a typo cannot break the look silently.
+- Read `event.currentTarget` before an `await`, and pass the element to a
+  callback that runs after it.
+- Set `aria-hidden="true"` on decorative icons in every render branch.
+
+### Comments
+
+- Comment a constraint the code cannot show (why a lookup goes through the
+  element's frame, why a `minWidth`). Delete a comment that restates the code.
+
+### Tests
+
+- Test behaviour that can break. Leave rendering (class names, which branch
+  renders, props passed through to MUI such as `open`, `onClose`, `aria-modal`)
+  to the Argos stories.
+- In jsdom, `ownerDocument.defaultView` is `window`: mount a test of
+  frame-dependent code in an iframe, so it fails if the code uses the app's
+  window.
+- Restore every global you mock (`navigator.clipboard`) after the test, and
+  move a setup shared by several test files into one helper.
+
 ## Release Flow (Automated)
 
 ```text
@@ -120,6 +176,13 @@ Stories are located in:
 
 - `packages/twake-mui/src/components/**/*.stories.tsx` - Component stories (e.g., Avatar)
 - `packages/twake-mui/src/stories/*.stories.tsx` - Override showcase stories
+
+When you write or change a story:
+
+- Show a new prop or look in the existing stories: a control in `Default` and a
+  section in `Screenshot`, rather than a new story per feature.
+- When twake-mui has its own component, render it in its stories, not the MUI
+  one it wraps.
 
 ### Visual Regression Testing
 
