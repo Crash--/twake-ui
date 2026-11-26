@@ -49,28 +49,44 @@ export const nameToColor = (name: string = ''): string | undefined => {
   return colors[key]
 }
 
+const segmenter =
+  typeof Intl.Segmenter === 'function'
+    ? new Intl.Segmenter(undefined, { granularity: 'grapheme' })
+    : null
+
+// A letter with its accents, a whole emoji (skin tone, family, flag)
+const firstCharacters = (text: string, count: number): string => {
+  // Without Intl.Segmenter (Firefox < 125) a letter keeps its accents but an
+  // emoji sequence may be cut
+  const characters =
+    segmenter === null
+      ? (text.match(/\P{M}\p{M}*|\p{M}+/gu) ?? [])
+      : Array.from(segmenter.segment(text), ({ segment }) => segment)
+  return characters.slice(0, count).join('')
+}
+
 /**
  * Extract initials from a name (first letter of first name + first letter of last name)
  * If only one name is provided, returns first 2 letters
  * Falls back to first 2 letters of email local-part if no name provided
+ * A character is never cut (an accent, an emoji), and the initials are the
+ * same whether the accents are composed or not
  * @param name - Display name
  * @param email - Email address (fallback source for initials)
  * @returns Uppercase initials string
  */
 export const getInitials = (name: string, email: string): string => {
-  if (!name || name === email) {
-    const emailPart = email.split('@')[0]
-    return emailPart.slice(0, 2).toUpperCase()
+  const initials = (): string => {
+    if (!name || name === email) {
+      return firstCharacters(email.split('@')[0], 2)
+    }
+    const parts = name.trim().split(/\s+/)
+    if (parts.length === 1) return firstCharacters(parts[0], 2)
+    return (
+      firstCharacters(parts[0], 1) + firstCharacters(parts[parts.length - 1], 1)
+    )
   }
-
-  const parts = name.trim().split(/\s+/)
-  if (parts.length === 1) {
-    return parts[0].slice(0, 2).toUpperCase()
-  }
-
-  const firstName = parts[0]
-  const lastName = parts[parts.length - 1]
-  return (firstName[0] + lastName[0]).toUpperCase()
+  return initials().toUpperCase().normalize('NFC')
 }
 
 /**
